@@ -11,8 +11,7 @@ const validateLoginInput = require('../../validation/login');
 router.get('/current', passport.authenticate('jwt', {session: false}), (req, res) => {
     res.json({
       id: req.user.id,
-      handle: req.user.handle,
-      email: req.user.email
+      username: req.user.username,
     });
   })
 
@@ -25,14 +24,13 @@ router.post("/register", (req, res) => {
       return res.status(400).json(errors);
     }
   
-    User.findOne({ handle: req.body.handle }).then(user => {
+    User.findOne({ username: req.body.username }).then(user => {
       if (user) {
-        errors.handle = "User already exists";
+        errors.username = "User already exists";
         return res.status(400).json(errors);
       } else {
         const newUser = new User({
-          handle: req.body.handle,
-          email: req.body.email,
+          username: req.body.username,
           password: req.body.password
         });
   
@@ -43,7 +41,7 @@ router.post("/register", (req, res) => {
             newUser
               .save()
               .then(user => {
-                const payload = { id: user.id, handle: user.handle };
+                const payload = { id: user.id, username: user.username };
   
                 jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
                   res.json({
@@ -66,18 +64,18 @@ router.post("/register", (req, res) => {
       return res.status(400).json(errors);
     }
   
-    const handle = req.body.handle;
+    const username = req.body.username;
     const password = req.body.password;
   
-    User.findOne({ handle }).then(user => {
+    User.findOne({ username }).then(user => {
       if (!user) {
-        errors.handle = "This user does not exist";
+        errors.username = "This user does not exist";
         return res.status(400).json(errors);
       }
   
       bcrypt.compare(password, user.password).then(isMatch => {
         if (isMatch) {
-          const payload = { id: user.id, handle: user.handle };
+          const payload = { id: user.id, username: user.username };
   
           jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
             res.json({
