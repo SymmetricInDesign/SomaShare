@@ -9,6 +9,29 @@ export const setAuthToken = token => {
   }
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // export const signup = (user) =>(
 //     $.ajax({
 //         url: "/api/users",
