@@ -1,22 +1,18 @@
-import React from 'react'
-import {AuthRoute, ProtectedRoute} from "../util/route_util"
-// import LoginFormContainer from "./session/login_form_container";
-// import SignupFormContainer from "./session/signup_form_container"
-import {Switch, Route, withRouter} from 'react-router-dom'
-// import Header from './header'
-// import Footer from './footer'
+import React from 'react';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import LoginFormContainer from '../components/login_form_container'
+import SignupFormContainer from '../components/signup_form_container'
+import { Switch, Route } from 'react-router-dom';
 
 
-const App = (props) => (
-  <div className="app">
-    <p>Hello SomaShare</p>
-    {/* <Switch>
-        <AuthRoute path="/login" component={LoginFormContainer}/>
-        <AuthRoute path="/signup" component={SignupFormContainer}/>
-        <Route path="/" component={Header}></Route>
-    </Switch> */}
-    
-  </div>
+import MainPage from './main/main_page';
+
+const App = () => (
+    <Switch>
+        <AuthRoute exact path="/login" component={LoginFormContainer}/>
+        <AuthRoute exact path="/signup" component={SignupFormContainer}/>
+        <Route exact path="/" component={MainPage} />
+    </Switch>
 );
 
-export default withRouter(App)
+export default App;
