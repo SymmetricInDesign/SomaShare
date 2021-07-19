@@ -15,3 +15,5 @@ module.exports = function validateLoginInput(data) {
     isValid: Object.keys(errors).length === 0
   };
 };
+
+// this is a test comment
