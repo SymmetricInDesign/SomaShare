@@ -13,17 +13,17 @@ const Splash = () => {
                 <img className='transit-icon' src="/images/books.jpg" alt="travel" />
     
                 <h2>
-                    Organize h
+                    Organize h2
                 </h2>
                 <Link className='signup' to='/signup'>Sign up</Link>
             </div>
-            <div className='right-1'>
+            {/* <div className='right-1'>
                  <img  src={window.ariplane_icon} alt="travel" />    
-            </div>
+            </div> */}
         </section>
     </div>
         <section className='features'>
-            <div className='left-2'>
+            {/* <div className='left-2'>
                 <div className='left-detail'>
                     <h1>
                         Track balance
@@ -33,8 +33,8 @@ const Splash = () => {
                 </div>
                      <img className='feature-img' src={window.track_balances} alt="track" />
                 
-            </div>
-             <div className='right-2'>
+            </div> */}
+             {/* <div className='right-2'>
                  <div className='right-detail'>
                  <h1>
                      Organize expenses
@@ -43,7 +43,7 @@ const Splash = () => {
                 </div>
                  <img className='feature-img' src={window.organize_expense} alt="organize" />
                  
-             </div>
+             </div> */}
             
         </section>
 
