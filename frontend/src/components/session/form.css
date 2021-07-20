@@ -1,0 +1,102 @@
+.login-form{
+    height: 475px;
+    width: 425px;
+    background-color: #9be2d3;
+    color: black;
+    font-weight: 700;
+    padding: 50px;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.username{
+    color: white;
+    margin-top: 90px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left:60px;
+}
+
+.password{
+    color:white;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left:60px;
+}
+
+.username-input{
+    padding:5px;
+    background-color: white;
+}
+
+.password-input{
+    padding:50px;
+    background-color: white;
+}
+
+.login-submit-btn{
+    background-color: #1cc29f;
+    cursor:pointer;
+    margin-left: 15px;
+    padding: 10px;
+    width:300px;
+    border-radius: 20px;
+    border:none;
+    margin-top: 45px;
+    margin-left:60px;
+    /* -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+         box-shadow: 0 8px 6px -6px black; */
+}
+
+/* .login-submit-btn:hover{
+    background-color: red;
+    background-color: #1cc29f;
+    cursor:pointer;
+    margin-left: 15px;
+    padding: 10px;
+    width:300px;
+    border-radius: 20px;
+    border:none;
+    margin-top: 45px;
+    margin-left:60px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+         box-shadow: 0 8px 6px -6px black;
+} */
+
+
+
+.signup-form{
+    height: 475px;
+    width: 425px;
+    background-color: #9be2d3;
+    color: black;
+    font-weight: 700;
+    padding: 50px;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.signup-submit-btn{
+    background-color: #1cc29f;
+    cursor:pointer;
+    margin-left: 15px;
+    padding: 10px;
+    width:300px;
+    border-radius: 8px;
+    border:none;
+    margin-top: 45px;
+    margin-left:60px;
+}
+
+
+
+
