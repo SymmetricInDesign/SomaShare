@@ -8,7 +8,7 @@ class PostIndexItem extends React.Component{
                 <a href={this.props.post.link}>
                 {this.props.post.description}
                 </a>
-                <p>{this.props.post.date}</p>
+                <p>{this.props.post.createdAt}</p>
             </div>
         )
     }
