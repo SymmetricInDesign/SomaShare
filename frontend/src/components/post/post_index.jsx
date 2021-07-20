@@ -1,12 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router-dom';  
+// import {Link} from 'react-router-dom';  
 import PostIndexItem from './post_index_item'
 
 
 class PostIndex extends React.Component {
-    constructor(){
-        super(props);
-    }
+    // constructor(){
+    //     super(props);
+    // }
 
     componentDidMount() {
     this.props.fetchPosts();
@@ -37,7 +37,7 @@ class PostIndex extends React.Component {
                             {posts.map((post)=>(
                             
                                 <PostIndexItem
-                                    key={post.id}
+                                    key={post._id}
                                     post={post}
                                     />           
                             ))}
