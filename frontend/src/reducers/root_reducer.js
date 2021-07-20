@@ -7,7 +7,7 @@ import sessionReducer from './session_reducer'
 
 export default combineReducers({
     errors: errorsReducer,
-    // entities: entitiesReducer,
+    entities: entitiesReducer,
     session: sessionReducer,
     // ui: uiReducer
 })

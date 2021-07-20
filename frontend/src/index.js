@@ -10,6 +10,7 @@ import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/session_api_util';
 
 import { logout, signup, login } from './actions/session_actions';
+import { createPost, fetchPost, fetchPosts, updatePost, deletePost } from './actions/post_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -45,6 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
   window.signup = signup
   window.login = login
   window.logout = logout
+  window.createPost = createPost
+  window.fetchPosts = fetchPosts
+  window.fetchPost = fetchPost
+  window.updatePost = updatePost
+  window.deletePost = deletePost
   // Render our root component and pass in the store as a prop
   const root = document.getElementById('root');
 
