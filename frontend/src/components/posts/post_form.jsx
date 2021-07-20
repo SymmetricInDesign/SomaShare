@@ -12,7 +12,7 @@ class PostForm extends React.Component{
     render(){
         return (
             <div>
-                <h2>{this.post.formType}</h2>
+                <h2>{this.props.formType}</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label className="post-label">Title
                         <input type="string" 
