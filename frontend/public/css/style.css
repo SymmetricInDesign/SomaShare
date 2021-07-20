@@ -1,0 +1,46 @@
+.body-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 100%;
+    overflow: auto;
+}
+
+.transition-container{
+  background-image: image-url('splash_bg.png');
+
+}
+.transition{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    height:33.3%;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.left-1{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+    
+}
+
+.left-1 p{
+  margin-top: 10px;
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
+  color: rgb(55,59,63) ;
+  line-height: 50px;
+  max-width: 390px;
+}
+.left-1 span{
+   color: #1cc29f;
+}
