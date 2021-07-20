@@ -1,0 +1,16 @@
+.NavBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.login-nav-btn{
+    text-decoration: none;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: yellow;
+}
