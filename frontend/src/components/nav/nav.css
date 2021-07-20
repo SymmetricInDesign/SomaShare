@@ -1,16 +1,57 @@
+.title-navbar{
+    font: white;
+
+}
 .NavBar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
-    margin-left: 15%;
-    margin-right: 15%;
+    /* background-color:#1cc29f; */
+    /* margin-left: 15%;
+    margin-right: 15%; */
 }
 
 .login-nav-btn{
     text-decoration: none;
-    border: solid 1px black;
-    border-radius: 5px;
-    background-color: yellow;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 20px;
+    background-color: #1cc29f;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+.login-nav-btn:hover{
+    text-decoration: none;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 20px;
+    background-color: #3dd3b2;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.title-nav{
+    padding-left: 10px;
+    color: #1cc29f;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+.title-nav:hover{
+    padding-left: 10px;
+    color: #3dd3b2;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
 }
