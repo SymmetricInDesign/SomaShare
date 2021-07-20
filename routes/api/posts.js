@@ -66,7 +66,7 @@ router.patch("/:id",
 //delete
 
 router.delete("/:id", (req, res)=>{
-    Post.deleteOne({_id: req.params.id})
+    Post.findOneAndDelete({_id: req.params.id})
         .then(post => res.json(post))
         .catch(err => 
             res.status(404).json({ nopostfound: "No post found with that id"}) 
