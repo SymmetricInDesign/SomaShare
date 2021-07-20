@@ -20,17 +20,21 @@ class PostIndex extends React.Component {
       return (
     
         <div className='body-container'>
-        <div className='transition-container'>
-            <section className='transition'> 
-                <div className='left-1'>
-                    <p>Browse and share your favorite educational resources <span>with confidence</span>
+        <div className='post-body-container'>
+         
+                <div className='post-headline'>
+                    {/* <p>Browse and share your favorite educational resources <span>with confidence</span>
+                    </p> */}
+                    <p>
+                        Browse.Share.Connect 
                     </p>
 
-                    <img className='transit-icon' src="/images/index_2.jpeg" alt="books" />
+                    {/* <img className='transit-icon' src="/images/index_2.jpeg" alt="books" /> */}
         
                 </div> 
-            </section>
-            <div>
+          
+            <div className='post-headline-1'>
+                <h2>Newest</h2>
                 {/* <div>Hello</div> */}
                 {posts ? 
                 <ul className='posts-index'>
