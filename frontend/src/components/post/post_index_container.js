@@ -3,11 +3,13 @@ import {connect} from "react-redux"
 import { fetchPosts } from "../../actions/post_actions"
 // import {withRouter} from "react-router-dom"
 
-const mSTP = state => ({
-
-posts: Object.values(state.entities.posts)
-    
-})
+const mSTP = (state={}) => {
+    let posts
+    if (state.entities.posts) posts = Object.values(state.entities.posts)
+    return {
+        posts
+    };
+};
 
 const mDTP = dispatch => ({
         fetchPosts: () => dispatch(fetchPosts())
