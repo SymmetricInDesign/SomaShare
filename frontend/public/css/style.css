@@ -6,10 +6,6 @@
     overflow: auto;
 }
 
-.transition-container{
-  background-image: image-url('splash_bg.png');
-
-}
 .transition{
     display: flex;
     flex-flow: row wrap;
