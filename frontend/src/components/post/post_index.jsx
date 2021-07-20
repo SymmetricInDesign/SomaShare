@@ -26,7 +26,7 @@ class PostIndex extends React.Component {
                     <p>Browse and share your favorite educational resources <span>with confidence</span>
                     </p>
 
-                    <img className='transit-icon' src="/images/books.jpg" alt="books" />
+                    <img className='transit-icon' src="/images/index_2.jpeg" alt="books" />
         
                 </div> 
             </section>
