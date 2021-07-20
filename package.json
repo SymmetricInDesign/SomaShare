@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "server": "nodemon app.js",
+    "server": "nodemon --delay 500ms app.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
     "frontend-install": "npm install --prefix frontend",
     "frontend": "npm start --prefix frontend",
@@ -32,9 +32,6 @@
     "mongoose": "^5.13.3",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
-    "react-redux": "^7.2.4",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
     "validator": "^13.6.0"
   },
   "devDependencies": {

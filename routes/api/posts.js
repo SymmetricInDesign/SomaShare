@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const Post = require('../../models/Post');
-// const validatePostInput = require('../../validation/posts');
+const validatePostInput = require('../../validation/posts');
 
 //index
 router.get("/", (req,res)=> {
@@ -26,13 +26,17 @@ router.get("/:id", (req, res) => {
 router.post("/", 
     passport.authenticate('jwt', { session: false}),
     (req, res) => {
-        // const {errors, isValid} = validatePostInput()
+        console.log(req)
+        const {errors, isValid} = validatePostInput(req.body)
 
-        // if (!isValid) {
-        //     return res.status(400).json(errors);
-        // }
+        if (!isValid) {
+            return res.status(400).json(errors);
+        }
+        const user = req.user.id
         const body = req.body
-        const {user, title, category, description, link} = {body}
+        console.log(body)
+        const {title, category, description, link} = body
+        console.log(title)
         const newPost = new Post({user, title, category, description, link})
 
         newPost.save().then( post => res.json(post))
@@ -43,14 +47,14 @@ router.post("/",
 router.patch("/:id", 
     passport.authenticate('jwt', { session: false}),
     (req, res) => {
-        // const {errors, isValid} = validatePostInput(req.body)
+        const {errors, isValid} = validatePostInput(req.body)
 
-        // if (!isValid) {
-        //     return res.status(400).json(errors);
-        // }
+        if (!isValid) {
+            return res.status(400).json(errors);
+        }
         let post = Post.findById(req.params.id)
         const body = req.body
-        const {title, category, description, link} = {body}
+        const {title, category, description, link} = body
         post.title = title
         post.category = category
         post.description = description
@@ -62,7 +66,7 @@ router.patch("/:id",
 //delete
 
 router.delete("/:id", (req, res)=>{
-    Post.deleteOne({id: req.params.id})
+    Post.findOneAndDelete({_id: req.params.id})
         .then(post => res.json(post))
         .catch(err => 
             res.status(404).json({ nopostfound: "No post found with that id"}) 
