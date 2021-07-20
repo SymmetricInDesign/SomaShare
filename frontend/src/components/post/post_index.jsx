@@ -4,7 +4,7 @@ import PostIndexItem from './post_index_item'
 
 
 class PostIndex extends React.Component {
-    constructor(){
+    constructor(props){
         super(props);
     }
 
@@ -30,19 +30,22 @@ class PostIndex extends React.Component {
         
                 </div> 
             </section>
-                    <div>
-                    
-                    <ul className='posts-index'>
-
-                            {posts.map((post)=>(
-                            
-                                <PostIndexItem
-                                    key={post.id}
-                                    post={post}
-                                    />           
-                            ))}
-                    </ul>
-                </div>   
+            <div>
+                {/* <div>Hello</div> */}
+                {posts ? 
+                <ul className='posts-index'>
+                        {posts.map((post)=>(
+                        
+                            <PostIndexItem
+                                key={post._id}
+                                post={post}
+                                />           
+                        ))}
+                </ul>
+                :
+                null
+                }
+            </div>   
 
             
         </div>
