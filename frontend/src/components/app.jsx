@@ -8,9 +8,6 @@ import NavBar from "../components/nav/navbar_container"
 import PostIndexContainer from '../components/post/post_index_container'
 import { Switch, Route } from 'react-router-dom';
 
-
-
-
 const App = () => (
     <>
         <Route path="/" component={NavBar} />
