@@ -22,24 +22,34 @@ class PostShow extends React.Component{
         <div className='post-show-complete-container'>
             <div className='post-show-container'>
                 <div className='post-show'>
-                    <div className='post-show-upper'>
-                    <a href={post.link} target="_blank">{post.title}</a>
+                    <div className='post-show-1'>
+                    
+                        <a href={post.link} target="_blank">{post.title}</a>
+                        <button>edit</button>
+                        <button>delete</button>
+                   </div>
+                    <div className='post-show-2'>
+                         <p>{post.description}</p>
+                    </div>
                     {/* <h2>{post.title}</h2> */}
-                    <p>{post.description}</p>
-                    </div>
+                   
+                    <div className='post-show-3'>
+                         <span className='post-time'>Last updated at: {post.updatedAt}</span>
+                         <span className='post-author'>Posted By: {post.username}</span>
+                         <span className='post-category'>Category: {post.category}</span>
+                      
+                        {/* <div className='post-show-lower-right'>
+                            <button>delete</button>
+                            <button>edit</button> */}
 
-                    <div className='post-show-lower'>
-                        <span className='post-time'>Last updated at: {post.updatedAt}</span>
-                        <span className='post-author'>Posted By: {post.username}</span>
-                        <span className='post-category'>Category: {post.category}</span>
                     </div>
-
-                </div>
+                        
+                 </div>
 
                 <div className='post-comment'>comments</div>
 
             </div>
-    </div>
+        </div>
        )
    
    }
