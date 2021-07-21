@@ -18,8 +18,12 @@ export const removePost = (postId)=>({
     postId
 })
 
-export const fetchPosts = ()=>dispatch=>(
-    ApiUtil.fetchPosts().then(res=>dispatch(receivePosts(Object.values(res.data))))
+export const fetchPosts = (category="All", searchText="-1") => dispatch => (
+    ApiUtil.fetchPosts(category, searchText).then(res=>dispatch(receivePosts(Object.values(res.data))))
+)
+
+export const fetchPostsForUser = (userId) => dispatch => (
+    ApiUtil.fetchPostsForUser(userId).then(res=>dispatch(receivePosts(Object.values(res.data))))
 )
 
 export const fetchPost = (postId) => dispatch=>(
