@@ -38,7 +38,10 @@ class NavBar extends React.Component {
         return (
           <div className="NavBar">
               <Link className="title-nav"to={'/'}>SomaShare</Link>
-              <Search/>
+              {/* <div className="nav-filler"> */}
+                <Search/>
+
+              {/* </div> */}
               <div>{ this.getLinks() }</div>
           </div>
         );

@@ -51,6 +51,8 @@
 .posts-index{
   margin-top: 10px;
   background-color: white;
+  display:flex;
+  flex-direction:column-reverse;
 }
 
 .post-index{
