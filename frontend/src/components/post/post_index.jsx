@@ -4,35 +4,25 @@ import PostIndexItem from './post_index_item'
 
 
 class PostIndex extends React.Component {
-    constructor(props){
-        super(props);
-    }
 
-    componentDidMount() {
+  componentDidMount() {
     this.props.fetchPosts();
   } 
 
-//   componentWillReceiveProps(newState) {
-//     this.setState({ posts: newState.posts });
-//   }
-    render() {
-        const {posts} = this.props
-      return (
-    
-        <div className='body-container'>
+render() {
+  const {posts} = this.props
+  return (
+    <div className='body-container'>
         <div className='post-body-container'>
-
-                <div className='post-headline'>
-                   
-
-                    <p>Browse.</p>
-                    <p>Share.</p>
-                    <p>Connect.</p>
-
-                    {/* <img className='transit-icon' src="/images/index_2.jpeg" alt="books" /> */}
-        
-                </div> 
-          
+            <div className='post-headline'>
+               
+                <p>Browse.</p>
+                <p>Share.</p>
+                <p>Connect.</p>
+                {/* <img className='transit-icon' src="/images/index_2.jpeg" alt="books" /> */}
+    
+            </div> 
+      
             <div className='post-headline-1'>
                 <h2>Newest</h2>
                 {/* <div>Hello</div> */}
@@ -50,13 +40,11 @@ class PostIndex extends React.Component {
                 null
                 }
             </div>   
-
-            
+        
         </div>
-       </div>
-
+    </div>
     )
-    }
+  }
 }
 
 export default PostIndex;

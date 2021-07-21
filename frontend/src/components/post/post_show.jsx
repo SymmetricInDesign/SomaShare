@@ -3,13 +3,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class PostShow extends React.Component{
-
      constructor(props){
        super(props);
        this.showFlag = false;
-
-    
    }
+
    componentDidMount(){
     // console.log(this.props)
    this.props.fetchPost(this.props.match.params.postId)

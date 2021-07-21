@@ -8,11 +8,24 @@ const validatePostInput = require('../../validation/posts');
 
 //index
 router.get("/", (req,res)=> {
-    // console.log(req.query)
     const {category, searchText} = req.query
-    // console.log(category)
     if (category == "All" && searchText=="-1"){
         Post.find()
+        .sort({ date: -1 })
+        .then( posts => res.json(posts))
+        .catch(err => res.status(404).json({nopostsfound: 'No Posts Found'}))
+    }else if (category == "All" && searchText != "-1"){
+        Post.find().where(`title LIKE '%${searchText}%' OR description LIKE '%${searchText}%'`)
+        .sort({ date: -1 })
+        .then( posts => res.json(posts))
+        .catch(err => res.status(404).json({nopostsfound: 'No Posts Found'}))
+    }else if (category != "All" && searchText == "-1"){
+        Post.find().where(`category LIKE '%${category}%'`)
+        .sort({ date: -1 })
+        .then( posts => res.json(posts))
+        .catch(err => res.status(404).json({nopostsfound: 'No Posts Found'}))
+    }else{
+        Post.find().where(`category LIKE '%${category}%' AND (title LIKE '%${searchText}%' OR description LIKE '%${searchText}%')`)
         .sort({ date: -1 })
         .then( posts => res.json(posts))
         .catch(err => res.status(404).json({nopostsfound: 'No Posts Found'}))

@@ -11,7 +11,7 @@ class PostForm extends React.Component{
         this.update = this.update.bind(this)
     }
     componentDidMount(){
-        if (this.props.formType == "Update Post")  this.props.fetchPost(this.props.match.params.postId)
+        if (this.props.formType === "Update Post")  this.props.fetchPost(this.props.match.params.postId)
     }
     handleSubmit(e){
         e.preventDefault();
@@ -47,10 +47,7 @@ class PostForm extends React.Component{
                                 </label>
                                 <label className="post-label">Category
                                 <select name="subject" className="subject" onChange={this.update('category')}>
-                                    <option value="Mathematics">Mathematics</option>
-                                    <option value="Science">Science</option>
-                                    <option value="English">English</option>
-                                    <option value="Computers">Computers</option>
+                                    {categoryOptions}
                                 </select>
                                 </label>
                                 <label className="post-label">Description
@@ -72,7 +69,7 @@ class PostForm extends React.Component{
                 </div>
         )
         } else {
-            return <h1></h1>
+            return <p></p>
         }
     }
 }
