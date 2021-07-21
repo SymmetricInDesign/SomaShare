@@ -6,11 +6,12 @@ class PostForm extends React.Component{
         super(props)
         this.state = props.post ? props.post : {};
         this.state.category = CATEGORIES[0]
+        this.state.username = props.username
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this)
     }
     componentDidMount(){
-        this.props.fetchPost(this.props.match.params.postId)
+        if (this.props.formType == "Update Post")  this.props.fetchPost(this.props.match.params.postId)
     }
     handleSubmit(e){
         e.preventDefault();
