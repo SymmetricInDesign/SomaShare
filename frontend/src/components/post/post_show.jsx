@@ -48,7 +48,7 @@ class PostShow extends React.Component{
     
                    
                     <div className='post-show-3'>
-                         <p className='post-time'>Last updated: {post.updatedAt.slice(0,9)}</p>
+                         <p className='post-time'>Last updated: {post.updatedAt.slice(0,10)}</p>
                          <p className='post-author'>Posted By: <span className='post-show-user'>{post.username}</span></p>
                          <p className='post-category'>Category: {post.category}</p>
                     
