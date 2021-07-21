@@ -71,7 +71,7 @@ class SignupForm extends React.Component {
               />
               </div>
             <input className ='signup-submit-btn' type="submit" value="Submit" />
-            {this.renderErrors()}
+            <div className='signup-form-errors'>{this.renderErrors()}</div>
         </form>
       </div>
     );

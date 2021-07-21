@@ -1,4 +1,5 @@
 import React from 'react';
+import {CATEGORIES} from '../../util/categories'
 
 class PostForm extends React.Component{
     constructor(props){
@@ -18,6 +19,9 @@ class PostForm extends React.Component{
         })
     }
     render(){
+        const categoryOptions = CATEGORIES.map((category, idx)=>(
+            <option key={idx} value={category}>{category[0].toUpperCase() + category.slice(1)}</option>
+        ))
         return (
             <div className="form-window">
                 <div className="form-box">
@@ -51,6 +55,7 @@ class PostForm extends React.Component{
                             </label>
                     </form>
                 </div>
+
             </div>
         )
     }

@@ -21,13 +21,13 @@ class PostIndex extends React.Component {
     
         <div className='body-container'>
         <div className='post-body-container'>
-         
+
                 <div className='post-headline'>
-                    {/* <p>Browse and share your favorite educational resources <span>with confidence</span>
-                    </p> */}
-                    <p>
-                        Browse.Share.Connect 
-                    </p>
+                   
+
+                    <p>Browse.</p>
+                    <p>Share.</p>
+                    <p>Connect.</p>
 
                     {/* <img className='transit-icon' src="/images/index_2.jpeg" alt="books" /> */}
         
