@@ -22,9 +22,9 @@ export const fetchPosts = (category="All", searchText="-1") => dispatch => (
     ApiUtil.fetchPosts(category, searchText).then(res=>dispatch(receivePosts(Object.values(res.data))))
 )
 
-// export const fetchPostsByUser = (category="All", searchText="-1") => dispatch => (
-//     ApiUtil.fetchPosts(category, searchText).then(res=>dispatch(receivePosts(Object.values(res.data))))
-// )
+export const fetchPostsForUser = (userId) => dispatch => (
+    ApiUtil.fetchPostsForUser(userId).then(res=>dispatch(receivePosts(Object.values(res.data))))
+)
 
 export const fetchPost = (postId) => dispatch=>(
     ApiUtil.fetchPost(postId).then(res=>dispatch(receivePost(res.data)))
