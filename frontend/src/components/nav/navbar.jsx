@@ -19,7 +19,7 @@ class NavBar extends React.Component {
                   {/* <Link to={'/tweets'}>All Tweets</Link>
                   <Link to={'/profile'}>Profile</Link>
                   <Link to={'/new_tweet'}>Write a Tweet</Link> /} */}
-                  <button onClick={()=>this.props.logout()}>Logout</button>
+                  <div className="logout-nav-btn" onClick={()=>this.props.logout()}>Logout</div>
                   
               </div>
           );
