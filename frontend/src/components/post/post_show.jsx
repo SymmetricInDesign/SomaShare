@@ -30,7 +30,7 @@ class PostShow extends React.Component{
 
                     <div className='post-show-lower'>
                         <span className='post-time'>Last updated at: {post.updatedAt}</span>
-                        <span className='post-author'>Posted By: {post.user.username}</span>
+                        <span className='post-author'>Posted By: {post.username}</span>
                         <span className='post-category'>Category: {post.category}</span>
                     </div>
 
