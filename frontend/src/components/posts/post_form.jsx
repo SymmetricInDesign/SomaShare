@@ -4,11 +4,18 @@ import {CATEGORIES} from '../../util/categories'
 class PostForm extends React.Component{
     constructor(props){
         super(props)
-        this.state = this.props.post
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.state = props.post
+        console.log(props )
+        // this.state.category = CATEGORIES[0]
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.update = this.update.bind(this)
+    }
+    componentDidMount(){
+        this.props.fetchPost(this.props.match.params.postId)
     }
     handleSubmit(e){
         e.preventDefault();
+        console.log(this.state)
         this.props.action(this.state);
     }
 
@@ -22,11 +29,14 @@ class PostForm extends React.Component{
         const categoryOptions = CATEGORIES.map((category, idx)=>(
             <option key={idx} value={category}>{category[0].toUpperCase() + category.slice(1)}</option>
         ))
+        if (this.state) {
+            
+      
         return (
             <div className="form-window">
                 <div className="form-box">
                     <h2 className="form-type">{this.props.formType}</h2>
-                    <form className="form-form" onSubmit={this.handleSubmit}>
+                    <form className="form-form" >
                             <label className="post-label">Title
                                 <input type="string" 
                                 value={this.state.title}
@@ -34,7 +44,7 @@ class PostForm extends React.Component{
                                 className="post-input"/>
                             </label>
                             <label className="post-label">Category
-                            <select name="subject" className="subject">
+                            <select name="subject" className="subject" onChange={this.update('category')}>
                                 <option value="Mathematics">Mathematics</option>
                                 <option value="Science">Science</option>
                                 <option value="English">English</option>
@@ -53,11 +63,15 @@ class PostForm extends React.Component{
                                 onChange={this.update('link')} 
                                 className="post-input"/>
                             </label>
+                            <div onClick={this.handleSubmit} className="post-submit-btn">{this.props.formType}</div>
                     </form>
                 </div>
 
             </div>
         )
+        } else {
+            return <h1></h1>
+        }
     }
 }
 
