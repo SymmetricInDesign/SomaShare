@@ -4,8 +4,9 @@ import LoginFormContainer from '../components/session/login_form_container'
 import SignupFormContainer from '../components/session/signup_form_container'
 import CreatePostContainer from "../components/posts/create_post_container";
 import UpdatePostContainer from "../components/posts/update_post_container";
-import NavBar from "../components/nav/navbar_container"
-import PostIndexContainer from '../components/post/post_index_container'
+import NavBar from "../components/nav/navbar_container";
+import PostIndexContainer from '../components/post/post_index_container';
+import PostShowContainer from '../components/post/post_show_container'
 import PostSearchContainer from '../components/search/post_search_container'
 import { Switch, Route } from 'react-router-dom';
 import "../styles/styles.scss"
@@ -19,6 +20,7 @@ const App = () => (
             <Route path="/posts/search" component={PostSearchContainer} />
             <ProtectedRoute exact path='/posts/new' component={CreatePostContainer}/>
             <ProtectedRoute exact path='/posts/:postId/edit' component={UpdatePostContainer}/>
+            <Route exact path="/posts/:postId" component={PostShowContainer}/>
             <Route exact path="/" component={PostIndexContainer} />
         </Switch>
     </>
