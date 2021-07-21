@@ -42,11 +42,11 @@ class PostIndexItem extends React.Component{
                         {this.getDate()} 
                     </div>
                     <div className='post-right'>
+
                         <Link className='post-right-1'to={`/posts/${post._id}`}>{post.title}</Link>
                         <p className='post-right-2'>{this.props.post.description}</p>
 
                     </div>
-                
                 </div>
             </div>
         </li>
