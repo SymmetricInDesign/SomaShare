@@ -5,7 +5,7 @@ const postsReducer = (state={}, action) => {
     let newState
     switch (action.type){
         case RECEIVE_POSTS:
-            newState = Object.assign({}, state)
+            newState = {}
             action.posts.forEach(post=>{
                 newState[post._id] = post
             })
