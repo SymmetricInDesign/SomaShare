@@ -26,22 +26,35 @@ class PostIndexItem extends React.Component{
          let day = date.slice(8, 10)
        return (
             <div className='post-date'>
-                <p className='post-month'>{monthHead[month]}</p> <p className='friend-bill-day'>{day}</p>
+                <p className='post-month'>{monthHead[month]}</p> <p className='post-day'>{day}</p>
             </div>
         )
     }  
 
     render(){
         return(
+        <li>
             <div className="post-details">
+                <div className='post-index-item'>
+                    <div className='post-left'>
+                        {this.getDate()} 
+                    </div>
+                    <div className='post-right'>
+                        {/* <h2 className='post-title'>{this.props.post.title}</h2>
+                        <p className='post-description'> {this.props.post.description}</p> */}
 
-                <a href={this.props.post.link} target="_blank" >
+                        <a className='post-right-1' href={this.props.post.link} target="_blank">{this.props.post.title}</a>
+                        <a className='post-right-2' href={this.props.post.link} target="_blank">{this.props.post.description}</a>
+                    </div>
+
+                {/* <a href={this.props.post.link} target="_blank" >
                 {this.props.post.title}
-                </a>
-                <h2> {this.props.post.description}</h2>
-        
-                <p>{this.props.post.createdAt}</p>
+                </a> */}
+                
+                </div>
             </div>
+        </li>
+        
         )
     }
 }
