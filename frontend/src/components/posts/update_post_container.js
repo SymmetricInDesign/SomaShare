@@ -5,9 +5,10 @@ import {withRouter} from "react-router";
 
 
 const mSTP = (state, ownProps) => {
-    console.log(ownProps)
+    const post = state.entities.posts[ownProps.match.params.postId]
+    console.log(post)
     return {
-        post: state.entities.posts[ownProps.match.params.postId],
+        post,
         formType: 'Update Post',
     }
 }

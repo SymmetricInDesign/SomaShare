@@ -1,7 +1,5 @@
-
-// import {RECEIVE_FILTERS} from '../actions/filter_actions'
 import {UPDATE_BOUNDS} from '../actions/filter_actions'
-const defaultState = {bounds: {searchText: "-1", category: "All Departments"}}
+const defaultState = {bounds: {searchText: "-1", category: "All"}}
 
 export default (state={}, action) => {
     Object.freeze(state)
