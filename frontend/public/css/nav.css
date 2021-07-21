@@ -1,6 +1,6 @@
 .title-navbar{
     font: white;
-
+    width: 15%;
 }
 .NavBar{
     display: flex;
@@ -10,8 +10,16 @@
     padding-left: 10px;
     padding-right: 10px;
     background-color:#f1f1f1;
+    position: relative;
+    height: 40px;
     /* /* margin-left: 15%; */
     /* padding-right: 15%; */
+}
+
+.nav-filler{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .login-nav-btn{
@@ -49,6 +57,7 @@
     font-size: 40px;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
+
 }
 .title-nav:hover{
     padding-left: 10px;
@@ -72,6 +81,7 @@
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 .logout-nav-btn:hover{
     text-decoration: none;
