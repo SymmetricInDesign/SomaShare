@@ -17,6 +17,9 @@ $theme-green-hover: #3dd3b2;
             font-size: 20px;
         }
     }   
+    .login-nav-btn:last-of-type{
+        display: none;
+    }
 }
 
 .search{
