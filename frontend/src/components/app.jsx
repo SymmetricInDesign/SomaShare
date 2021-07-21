@@ -8,7 +8,6 @@ import NavBar from "../components/nav/navbar_container";
 import PostIndexContainer from '../components/post/post_index_container';
 import PostShowContainer from '../components/post/post_show_container'
 import PostSearchContainer from '../components/search/post_search_container'
-
 import { Switch, Route } from 'react-router-dom';
 import "../styles/styles.scss"
 
