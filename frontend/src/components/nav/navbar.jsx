@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-// import './nav.css'
+import Search from "./search"
 
 class NavBar extends React.Component {
     constructor(props){
@@ -15,11 +15,11 @@ class NavBar extends React.Component {
     getLinks() {
         if (this.props.loggedIn) {
           return (
-              <div>
+              <div className="session-btn-nav">
                   {/* <Link to={'/tweets'}>All Tweets</Link>
                   <Link to={'/profile'}>Profile</Link>
                   <Link to={'/new_tweet'}>Write a Tweet</Link> /} */}
-                  <button onClick={()=>this.props.logout()}>Logout</button>
+                  <div className="login-nav-btn" onClick={()=>this.props.logout()}>Logout</div>
                   
               </div>
           );
@@ -37,6 +37,7 @@ class NavBar extends React.Component {
         return (
           <div className="NavBar">
               <Link className="title-nav"to={'/'}>SomaShare</Link>
+              <Search/>
               <div>{ this.getLinks() }</div>
           </div>
         );

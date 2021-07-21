@@ -1,4 +1,5 @@
 import React from 'react';
+import {CATEGORIES} from '../../util/categories'
 
 class PostForm extends React.Component{
     constructor(props){
@@ -10,6 +11,9 @@ class PostForm extends React.Component{
         this.props.action(this.state);
     }
     render(){
+        const categoryOptions = CATEGORIES.map((category, idx)=>(
+            <option key={idx} value={category}>{category[0].toUpperCase() + category.slice(1)}</option>
+        ))
         return (
             <div>
                 <h2>{this.props.formType}</h2>
@@ -21,10 +25,7 @@ class PostForm extends React.Component{
                     </label>
                     <label className="post-label">Category</label>
                     <select name="subject" className="subject">
-                        <option value="Mathematics">Mathematics</option>
-                        <option value="Science">Science</option>
-                        <option value="English">English</option>
-                        <option value="Computers">Computers</option>
+                        {categoryOptions}
                     </select>
                     <label className="post-label">Description
                         <textarea 

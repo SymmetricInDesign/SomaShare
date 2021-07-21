@@ -7,6 +7,7 @@ import UpdatePostContainer from "../components/posts/update_post_container";
 import NavBar from "../components/nav/navbar_container"
 import PostIndexContainer from '../components/post/post_index_container'
 import { Switch, Route } from 'react-router-dom';
+import "../styles/styles.scss"
 
 const App = () => (
     <>

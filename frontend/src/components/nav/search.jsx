@@ -1,4 +1,8 @@
 import React from 'react'
+import {CATEGORIES} from '../../util/categories'
+import {Link} from "react-router-dom"
+const queryString = require('query-string')
+
 
 
 class Search extends React.Component{
@@ -31,8 +35,8 @@ class Search extends React.Component{
     }
 
     render(){
-        const categoryOptions = this.props.categories.map(category=>(
-            <option key={category.id} value={category.name}>{category.name[0].toUpperCase() + category.name.slice(1)}</option>
+        const categoryOptions = CATEGORIES.map((category, idx)=>(
+            <option key={idx} value={category}>{category[0].toUpperCase() + category.slice(1)}</option>
         ))
         categoryOptions.unshift(<option key={-10} value="All">All</option>)
         return(
