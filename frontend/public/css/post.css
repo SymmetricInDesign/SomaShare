@@ -3,7 +3,6 @@
     color: white;
     font-weight: bold;
 }
-
 .form-window{
     display: flex;
     flex-direction: column;
@@ -11,14 +10,13 @@
     align-items: center;
     height: 90vh;
 }
-
 .form-box{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #1cc29f;
-    background-color: #1cc29f;
+    background-color: #1CC29F;
+    background-color: #1CC29F;
     width: 500px;
     padding: 25px;
     border-radius: 15px;
@@ -26,18 +24,15 @@
     -webkit-box-shadow: 0 8px 2px 2px #059576;
     -moz-box-shadow: 0 8px 2px 2px #059576;
          box-shadow: 0 2px 2px 3px #059576;
-
 }
-
 .form-form{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #1cc29f;
+    background-color: #1CC29F;
     width: 100%;
     
 }
-
 form.form-form label{
     width: 100%;
     box-sizing: border-box;
@@ -58,7 +53,6 @@ form.form-form label{
     font-weight: lighter;
     border: solid 2px #04a381;
 }
-
 .post-textbox{
     height:100px;
     width: 100%;
@@ -77,7 +71,6 @@ form.form-form label{
 .post-textbox:focus, .post-input:focus, .subject:focus{
     outline:none;
 }
-
 .form-type{
     font-family: 'Montserrat', sans-serif; 
     font-size: 30px;
