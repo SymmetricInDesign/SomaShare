@@ -1,6 +1,7 @@
 import React from 'react'
 import {CATEGORIES} from '../../util/categories'
 import {Link} from "react-router-dom"
+import $ from 'jquery'
 const queryString = require('query-string')
 
 
@@ -20,7 +21,7 @@ class Search extends React.Component{
     }
 
     updateCategory(e){
-        this.setState({category: e.target.value})
+        this.setState({category: $('#category-select').val()})
     }
     updateSearchText(e){
         this.setState({searchText: e.target.value})
@@ -53,7 +54,7 @@ class Search extends React.Component{
                 </div>
                 <input type="text" onChange={this.updateSearchText} onKeyPress={this.checkForEnter}/>
                 <Link to={{
-                    pathname: '/products/search',
+                    pathname: '/posts/search',
                     search: queryString.stringify(this.state)
                     }} 
                     className="search-icon-container" replace ref={node => this.searchButton = node}>
