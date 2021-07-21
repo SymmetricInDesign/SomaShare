@@ -12,6 +12,7 @@ const mSTP = (state, ownProps) => {
             description: '',
             link: '', 
         }, 
+        username: state.session.user.username,
         formType: 'Create Post'
     }
 }
