@@ -1,38 +1,30 @@
 .post-label{
     font-family: 'Montserrat', sans-serif;
-
-
 }
-
 .form-window{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 .form-box{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #1cc29f;
-    background-color: #1cc29f;
+    background-color: #1CC29F;
+    background-color: #1CC29F;
     width: 500px;
     padding: 15px;
     border-radius: 20px;
-
-
 }
-
 .form-form{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #1cc29f;
+    background-color: #1CC29F;
     width: 100%;
 }
-
 form.form-form label{
     width: 100%;
     box-sizing: border-box;
@@ -50,7 +42,6 @@ form.form-form label{
     font-size: 16px;
     font-weight: lighter;
 }
-
 .post-textbox{
     height:100px;
     width: 100%;
@@ -63,9 +54,7 @@ form.form-form label{
     /* font-size: 16px; */
     font-weight: lighter;
 }
-
 .form-type{
     font-family: sans-serif; 
     font-size: 30px;
 }
-
