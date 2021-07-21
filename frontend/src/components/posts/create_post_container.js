@@ -12,13 +12,13 @@ const mSTP = (state, ownProps) => {
             description: '',
             link: '', 
         }, 
-        formType: 'Add_post'
+        formType: 'Create Post'
     }
 }
 
 const mDTP = (dispatch) => {
     return {
-        createPost: post => dispatch(createPost(post))
+        action: post => dispatch(createPost(post))
     }
 }
 

@@ -1,7 +1,7 @@
 .post-label{
     font-family: 'Montserrat', sans-serif;
-
-
+    color: white;
+    font-weight: bold;
 }
 
 .form-window{
@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 90vh;
 }
 
 .form-box{
@@ -19,9 +20,12 @@
     background-color: #1cc29f;
     background-color: #1cc29f;
     width: 500px;
-    padding: 15px;
-    border-radius: 20px;
-
+    padding: 25px;
+    border-radius: 15px;
+    /* border: solid 1px #099c7c; */
+    -webkit-box-shadow: 0 8px 2px 2px #059576;
+    -moz-box-shadow: 0 8px 2px 2px #059576;
+         box-shadow: 0 2px 2px 3px #059576;
 
 }
 
@@ -31,6 +35,7 @@
     justify-content: center;
     background-color: #1cc29f;
     width: 100%;
+    
 }
 
 form.form-form label{
@@ -44,11 +49,14 @@ form.form-form label{
     box-sizing: border-box;
     margin-bottom: 13px;
     margin-top:3px;
-    border-radius: 7px;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     box-shadow: rgba(255, 255, 255, 0.65);
     font-family: sans-serif;
     font-size: 16px;
     font-weight: lighter;
+    border: solid 2px #04a381;
 }
 
 .post-textbox{
@@ -57,15 +65,60 @@ form.form-form label{
     box-sizing: border-box;
     margin-bottom: 13px;
     margin-top:3px;
-    border-radius: 7px;
-    /* box-shadow: rgba(255, 255, 255, 0.65); */
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: rgba(255, 255, 255, 0.65);
     font-family: sans-serif;
-    /* font-size: 16px; */
+    font-size: 16px;
     font-weight: lighter;
+    border: solid 2px #04a381;
+
+}
+.post-textbox:focus, .post-input:focus, .subject:focus{
+    outline:none;
 }
 
 .form-type{
-    font-family: sans-serif; 
+    font-family: 'Montserrat', sans-serif; 
     font-size: 30px;
+    font-weight: bold;
+    color: whitesmoke;
 }
+
+.post-submit-btn{
+
+    background-color: #12a384;
+    cursor:pointer;
+    padding: 15px;
+    width:300px;
+    border-radius: 30px;
+    border:none;
+    margin-top: 15px; 
+    text-align: center;
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.post-submit-btn:hover{
+
+    background-color: #04a381;
+    cursor:pointer;
+    padding: 15px;
+    width:300px;
+    border-radius: 30px;
+    border:none;
+    margin-top: 15px; 
+    text-align: center;
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: bold;
+    cursor:pointer;
+    transform: scale(1.02);
+
+}
+
+
 
