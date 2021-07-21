@@ -1,6 +1,6 @@
 import { connect} from 'react-redux';
 import PostForm from './post_form';
-import {createPost} from '../../actions/post_actions'
+import {createPost, fetchPost} from '../../actions/post_actions'
 
 
 
@@ -12,13 +12,15 @@ const mSTP = (state, ownProps) => {
             description: '',
             link: '', 
         }, 
-        formType: 'Add_post'
+        username: state.session.user.username,
+        formType: 'Create Post'
     }
 }
 
 const mDTP = (dispatch) => {
     return {
-        createPost: post => dispatch(createPost(post))
+        fetchPost: postId => dispatch(fetchPost(postId)),
+        action: post => dispatch(createPost(post))
     }
 }
 

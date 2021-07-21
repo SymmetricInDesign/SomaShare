@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-export const fetchPosts = () => {
-    return axios.get('/api/posts');
+export const fetchPosts = (category="All", searchText="-1") => {
+    const search = {category, searchText}
+    return axios.get('/api/posts', {params: search});
 };
 export const fetchPostsForUser = (userId) => {
     return axios.get(`/api/users/${userId}/posts`)
@@ -16,7 +17,7 @@ export const createPost = (post) => {
 }
 
 export const updatePost = (post) => {
-    return axios.patch(`/api/posts/${post.id}`, post)
+    return axios.patch(`/api/posts/${post._id}`, post)
 }
 
 export const deletePost = (postId) => {
