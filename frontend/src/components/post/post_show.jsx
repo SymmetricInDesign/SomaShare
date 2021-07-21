@@ -3,10 +3,6 @@ import React from 'react';
 
 class PostShow extends React.Component{
 
-     constructor(props){
-       super(props)
-    
-   }
    componentDidMount(){
     // console.log(this.props)
    this.props.fetchPost(this.props.match.params.postId)
@@ -23,7 +19,7 @@ class PostShow extends React.Component{
             <div className='post-show-container'>
                 <div className='post-show'>
                     <div className='post-show-upper'>
-                    <a href={post.link} target="_blank">{post.title}</a>
+                    <a href={post.link} target="/">{post.title}</a>
                     {/* <h2>{post.title}</h2> */}
                     <p>{post.description}</p>
                     </div>

@@ -1,4 +1,3 @@
-import { STATES } from "mongoose"
 import * as ApiUtil from "../util/posts_api_util"
 
 export const RECEIVE_POSTS = "RECEIVE_POSTS"
