@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 class PostIndexItem extends React.Component{
 
     constructor(props){
@@ -32,6 +33,7 @@ class PostIndexItem extends React.Component{
     }  
 
     render(){
+        const {post} = this.props
         return(
         <li>
             <div className="post-details">
@@ -43,8 +45,12 @@ class PostIndexItem extends React.Component{
                         {/* <h2 className='post-title'>{this.props.post.title}</h2>
                         <p className='post-description'> {this.props.post.description}</p> */}
 
-                        <a className='post-right-1' href={this.props.post.link} target="_blank">{this.props.post.title}</a>
+                        {/* <a className='post-right-1' href={this.props.post.link} target="_blank">{this.props.post.title}</a>
                         <a className='post-right-2' href={this.props.post.link} target="_blank">{this.props.post.description}</a>
+                         */}
+                        <Link className='post-right-1'to={`/posts/${post._id}`}>{post.title}</Link>
+                        <p className='post-right-2'>{this.props.post.description}</p>
+
                     </div>
 
                 {/* <a href={this.props.post.link} target="_blank" >

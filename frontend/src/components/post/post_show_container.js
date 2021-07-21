@@ -1,9 +1,10 @@
 import {connect} from 'react-redux';
 import {fetchPost} from '../../actions/post_actions';
 import PostShow from './post_show';
+import{withRouter} from 'react-router'
 
 const mSTP = (state, ownProps) => {
-    
+    console.log(ownProps)
     return{
         post: state.entities.posts[ownProps.match.params.postId]
     }
@@ -16,4 +17,4 @@ const mDTP = dispatch => ({
 
 })
 
-export default connect(mSTP, mDTP)(PostShow)
+export default withRouter(connect(mSTP, mDTP)(PostShow))
