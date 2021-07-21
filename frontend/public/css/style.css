@@ -55,3 +55,73 @@
   font-size: 20px
 }
 
+.post-date{
+    display: block;
+    text-align: center;
+    width: 50px;
+    color: #a8a7a7;
+}
+
+.post-month {
+    font-size: 10px;
+}
+
+.post-day {
+    font-size: 20px;
+}
+
+.post-index-item {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+    font-family: Lato;
+    font-size: 16px;
+    color: #333333;
+    min-height: 32px;
+    align-items: center;
+}
+
+.post-left > p, .post-right > p {
+    margin-left: 30px;
+}
+
+.post-left {
+    display: flex;
+    align-items: center;
+}
+
+.post-left > p {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Lato;
+    color: black
+}
+
+
+
+.post-right {
+    display: flex;
+    justify-content: center;
+}
+
+.post-right > div > p {
+    justify-content: center;
+    margin-right: 30px;
+    width: 150px;
+}
+
+.post-index-item:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.post-index-item:hover > span > .details > button {
+    color: white;
+    cursor: pointer;
+    background-color: #ff652f;
+}
+
+.post-index-item:hover > span > .details {
+    border-color: #c75b34;
+    background-color: #ff652f;
+}
