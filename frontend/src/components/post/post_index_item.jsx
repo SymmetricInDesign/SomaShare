@@ -34,17 +34,24 @@ class PostIndexItem extends React.Component{
     render(){
         return(
         <li>
-
             <div className="post-details">
                 <div className='post-index-item'>
-                    <span className='post-left'>
-                        {this.getDate()} <p>{this.props.post.title}</p>
-                    </span>
+                    <div className='post-left'>
+                        {this.getDate()} 
+                    </div>
+                    <div className='post-right'>
+                        {/* <h2 className='post-title'>{this.props.post.title}</h2>
+                        <p className='post-description'> {this.props.post.description}</p> */}
+
+                        <a className='post-right-1' href={this.props.post.link} target="_blank">{this.props.post.title}</a>
+                        <a className='post-right-2' href={this.props.post.link} target="_blank">{this.props.post.description}</a>
+                    </div>
+
                 {/* <a href={this.props.post.link} target="_blank" >
                 {this.props.post.title}
                 </a> */}
-                <h2> {this.props.post.description}</h2>
-            </div>
+                
+                </div>
             </div>
         </li>
         
