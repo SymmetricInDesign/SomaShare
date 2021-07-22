@@ -116,7 +116,7 @@ router.delete("/:id", (req, res)=>{
 
 //Comment Index
 router.get("/:postId/comments", (req,res)=> {
-    Comment.find({post: req.params.postId})
+    Comment.find({postId: req.params.postId})
     .sort({date: 1})
     .then(comments => res.json(comments))
     .catch(err => 
