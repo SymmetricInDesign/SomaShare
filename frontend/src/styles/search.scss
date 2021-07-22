@@ -84,7 +84,7 @@ $theme-green-hover: #3dd3b2;
     width: 50%;
     height: 100%;
     border: none;
-    padding: 8px 10px;
+    padding: 9px 10px;
     outline: none;
     &:focus{
         border: none;
@@ -143,6 +143,10 @@ $theme-green-hover: #3dd3b2;
     &:first-of-type{
         border-top-left-radius: 15px;
     }
+    cursor: pointer;
+}
+#root > div.NavBar > div.search > div > div{
+    cursor: pointer;
 }
 #root > div.NavBar > div.search .react-select__menu-list{
     overflow: hidden;
@@ -168,35 +172,36 @@ $theme-green-hover: #3dd3b2;
     outline: none;
     border: none;
     box-shadow: none;
+    cursor: pointer;
 }
 
 #root > div.NavBar > div.search > div > div{
     border-bottom-left-radius: 14px;
     border-top-left-radius: 14px;
 }
-#root > div.NavBar > div.search > div > div > div > div.react-select__indicators.css-1hb7zxy-IndicatorsContainer{
+#root > div.NavBar > div.search > div > div > div > div.react-select__indicators{
     
 }
-#root > div.NavBar > div.search > div > div > div > div.react-select__indicators.css-1hb7zxy-IndicatorsContainer{
+#root > div.NavBar > div.search > div > div > div > div.react-select__indicators{
     height: 25px;
     border-bottom-left-radius: 14px;
     border-top-left-radius: 14px;
 }
-#root > div.NavBar > div.search > div > div > div > div.react-select__value-container.react-select__value-container--has-value.css-g1d714-ValueContainer{
+#root > div.NavBar > div.search > div > div > div > div.react-select__value-container.react-select__value-container--has-value{
     height: 25px;
     border-bottom-left-radius: 14px;
     border-top-left-radius: 14px;
 }
-#root > div.NavBar > div.search > div > div > div > div.react-select__indicators.css-1hb7zxy-IndicatorsContainer > div{
+#root > div.NavBar > div.search > div > div > div > div.react-select__indicators > div{
     // height: 30px;
     padding: 0;
     color: rgb(255, 255, 255);
 }
 
-#root > div.NavBar > div.search > div > div > div > div.react-select__indicators.css-1hb7zxy-IndicatorsContainer > span{
+#root > div.NavBar > div.search > div > div > div > div.react-select__indicators > span{
     display: none;
 }
-#root > div.NavBar > div.search > div > div > div > div.react-select__value-container.react-select__value-container--has-value.css-g1d714-ValueContainer{
+#root > div.NavBar > div.search > div > div > div > div.react-select__value-container.react-select__value-container--has-value{
     display: flex;
     justify-content: center;
     // position: relative;
@@ -213,14 +218,8 @@ $theme-green-hover: #3dd3b2;
 //     width: 100px;
 // }
 
-.react-select-container{
-    // background-color: $theme-green-hover;
-    // .react-select-container__control{
-    //     background-color: $theme-green-hover;
-    // }
-    // .react-select__menu{
-    //     background-color: $theme-green-hover;
-    // }
+#root > div.NavBar > div.search > div > div > div > div.react-select__value-container.react-select__value-container--has-value{
+    position: static
 }
 
 // .select2-dropdown.select2-dropdown--below{
