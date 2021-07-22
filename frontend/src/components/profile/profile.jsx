@@ -1,5 +1,5 @@
 import React from 'react';
-import PostIndexItem from '../post/post_index_item';
+import PostIndexItem from './profile_index_item';
 import {Link} from 'react-router-dom';
 
 class Profile extends React.Component {
@@ -27,6 +27,7 @@ class Profile extends React.Component {
                             
                             posts.map(post => (
                                 <PostIndexItem
+                                deletePost = {this.props.deletePost}
                                 currentUserId = {this.props.currentUserId}
                                 key={post._id}
                                 post={post}
