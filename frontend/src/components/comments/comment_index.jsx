@@ -16,7 +16,7 @@ class CommentIndex extends React.Component{
                 <ul>
                     { comments.map(comment => (
                         <CommentIndexItem
-                        key={comment.id}
+                        key={comment._id}
                         comment={comment}
                         />
                     ))
