@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CommentFormContainer from '../comments/comment_form_container';
 
+
 class PostShow extends React.Component{
      constructor(props){
        super(props);
@@ -10,7 +11,7 @@ class PostShow extends React.Component{
    }
 
    componentDidMount(){
-    // console.log(this.props)
+   
    this.props.fetchPost(this.props.match.params.postId)
 
    }
@@ -26,11 +27,11 @@ class PostShow extends React.Component{
         if(!post){
            return null;
        }
-       console.log(currentUserId)
-       console.log(post.user)
+       
        currentUserId === post.user ? this.showFlag=true : this.showFlag=false;
      
        const show_flag = this.showFlag ? 'show' : 'not-show';
+       const postAutherId = post.user
 
       
 
@@ -55,7 +56,9 @@ class PostShow extends React.Component{
                    
                     <div className='post-show-3'>
                          <p className='post-time'>Last updated: {post.updatedAt.slice(0,10)}</p>
-                         <p className='post-author'>Posted By: <span className='post-show-user'>{post.username}</span></p>
+                        
+                         <p className='post-author'>Posted By: <Link className='post-show-user' to={`/users/${postAutherId}`}>{post.username}</Link></p>
+                         {console.log(postAutherId)}
                          <p className='post-category'>Category: {post.category}</p>
                     
                     </div>

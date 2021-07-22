@@ -5,10 +5,12 @@ import{withRouter} from 'react-router'
 import PostIndex from '../post/post_index.jsx';
 
 const mSTP = (state, ownProps) => {
+    // debugger
     return{
         posts: Object.values(state.entities.posts),
-        currentUserId: state.session.user.id, 
+        // currentUser: state.session.user.id, 
         username: state.session.user.username,
+        userId: ownProps.match.params.userId
     }
 }
 

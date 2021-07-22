@@ -1,27 +1,41 @@
 import React from 'react';
 import PostIndexItem from './profile_index_item';
 import {Link} from 'react-router-dom';
+import * as UserUtil from '../../util/user_api_util'
 
 class Profile extends React.Component {
 
+    constructor(props){
+        super(props)
+        this.getUser = this.getUser.bind(this);
+    }
+
     componentDidMount(){
-        this.props.fetchPostsForUser(this.props.currentUserId)
-        // this.props.fetch
+        // this.props.fetchPostsForUser(this.props.currentUser)
+        // console.log(this.props.Id)
+        this.props.fetchPostsForUser(this.props.userId)
+    }
+
+    async getUser(userId){
+        // debugger
+        const res = await UserUtil.fetchUser(this.props.userId);
+        console.log(res);
+        console.log(res.data.username)
+        return res.data.username;
     }
 
 
     render(){
-        console.log(this.props)
-        // console.log("hello")
-        // console.log(this.props.currentUserId)
+        const {userId, posts} = this.props
+        
         if (this.props.posts && this.props.posts.length > 0){
-            const {posts} = this.props
+            // const {posts} = this.props
             return(
                 
                 <div className='body-container'>
                 <div className='post-body-container'>
                     <div className='post-headline-1'>
-                        <div className="profile-name">{this.props.username}'s posts</div>
+                        <div className="profile-name">{this.getUser(userId)}'s posts</div>
                         <ul className='posts-index'>
                         {
                             
