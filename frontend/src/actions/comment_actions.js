@@ -21,7 +21,7 @@ export const fetchCommentsForUser = (userId) => dispatch => (
     ApiUtil.fetchCommentsForUser(userId).then(res=>dispatch(receiveComments(Object.values(res.data))))
 )
 
-export const fetchCommentsForcomment = (postId) => dispatch => (
+export const fetchCommentsForPost = (postId) => dispatch => (
     ApiUtil.fetchCommentsForPost(postId).then(res=>dispatch(receiveComments(Object.values(res.data))))
 )
 

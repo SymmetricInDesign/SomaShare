@@ -5,9 +5,12 @@ class CommentForm extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            body: ''
+            commentBody: '',
+            username: this.props.username,
+            postId: this.props.postId
         }
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.updateBody = this.updateBody.bind(this)
     }
 
     handleSubmit(e){
@@ -15,14 +18,18 @@ class CommentForm extends React.Component{
         this.props.createComment(this.state)
     }
 
+    updateBody(e){
+        console.log(this.state)
+        this.setState({commentBody: e.target.value})
+    }
+
 
     render(){
-        console.log(this.props)
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Enter a comment:
-                        <textarea/>
+                        <textarea value={this.state.commentBody} onChange={this.updateBody}/>
                     </label>
                     <input type='submit' />
                 </form>

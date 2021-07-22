@@ -65,7 +65,7 @@ class PostShow extends React.Component{
                 <div className='post-comment'>
                         Comments:
 
-                        <CommentFormContainer/> 
+                        <CommentFormContainer postId={post._id}/> 
 
                 </div>
 
