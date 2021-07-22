@@ -34,7 +34,7 @@ class PostShow extends React.Component{
                 <div className='post-show'>
                     <div className='post-show-1'>
                     
-                        <a href={post.link} target="_blank">{post.title}</a>
+                        <a href={post.link} target="/">{post.title}</a>
                         <div className='post-show-btns' id={show_flag}>
                         <Link className='post-show-edit' to={`/posts/${post._id}/edit`}>Edit</Link>
                         <button className='post-show-delete' onClick={() => { if (window.confirm('Are you sure you want to delete this post?')) deletePost(post._id) } }>Delete</button>
