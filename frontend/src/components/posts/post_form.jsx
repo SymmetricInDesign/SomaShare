@@ -49,10 +49,7 @@ class PostForm extends React.Component{
                                 </label>
                                 <label className="post-label">Category
                                 <select name="subject" className="subject" onChange={this.update('category')}>
-                                    <option value="Mathematics">Mathematics</option>
-                                    <option value="Science">Science</option>
-                                    <option value="English">English</option>
-                                    <option value="Computers">Computers</option>
+                                    {categoryOptions}
                                 </select>
                                 </label>
                                 <label className="post-label">Description
@@ -62,7 +59,7 @@ class PostForm extends React.Component{
                                     className="post-textbox"/>
                                 </label>
                                 <label className="post-label">Link
-                                    <input type="string" 
+                                    <input type="url" 
                                     value={this.state.link}
                                     onChange={this.update('link')} 
                                     className="post-input"/>
@@ -74,7 +71,7 @@ class PostForm extends React.Component{
                 </div>
         )
         } else {
-            return <h1></h1>
+            return <p></p>
         }
     }
 }

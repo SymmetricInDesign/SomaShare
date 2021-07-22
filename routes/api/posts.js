@@ -8,11 +8,38 @@ const validatePostInput = require('../../validation/posts');
 
 //index
 router.get("/", (req,res)=> {
-    // console.log(req.query)
     const {category, searchText} = req.query
-    // console.log(category)
+    console.log(req.query)
     if (category == "All" && searchText=="-1"){
+        debugger
         Post.find()
+        .sort({ date: -1 })
+        .then( posts => res.json(posts))
+        .catch(err => res.status(404).json({nopostsfound: 'No Posts Found'}))
+    }else if (category == "All" && searchText != "-1"){
+        console.log(searchText)
+        Post.find().where({$or: [
+            {title: new RegExp(`${searchText}`)},
+            {description: new RegExp(`${searchText}`)}
+        ]})
+        .sort({ date: -1 })
+        .then( posts => res.json(posts))
+        .catch(err => res.status(404).json({nopostsfound: 'No Posts Found'}))
+    }else if (category != "All" && searchText == "-1"){
+        Post.find().where({category: category})
+        .sort({ date: -1 })
+        .then( posts => res.json(posts))
+        .catch(err => res.status(404).json({nopostsfound: 'No Posts Found'}))
+    }else{
+        Post.find().where(
+            {$and: [
+                {$or: [
+                    {title: new RegExp(`${searchText}`)},
+                    {description: new RegExp(`${searchText}`)}
+                ]},
+                    {category: category}
+            ]}
+        )
         .sort({ date: -1 })
         .then( posts => res.json(posts))
         .catch(err => res.status(404).json({nopostsfound: 'No Posts Found'}))

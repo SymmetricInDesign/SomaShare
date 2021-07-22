@@ -54,6 +54,7 @@ class SignupForm extends React.Component {
     return (
       <div className="signup-form">
         <form onSubmit={this.handleSubmit}>
+          <div className='signup-form-header'>Sign Up for SomaShare!</div>
           <div className="username">
             <br/>Username:
               <input className='username-input' type="text"
