@@ -7,23 +7,15 @@ class Profile extends React.Component {
 
     constructor(props){
         super(props)
-        this.getUser = this.getUser.bind(this);
+        this.state = {user: ""}
     }
 
     componentDidMount(){
-        // this.props.fetchPostsForUser(this.props.currentUser)
-        // console.log(this.props.Id)
         this.props.fetchPostsForUser(this.props.userId)
+        UserUtil.fetchUser(this.props.userId).then(res=>{
+            this.setState({user: res.data.username})
+        });
     }
-
-    async getUser(userId){
-        // debugger
-        const res = await UserUtil.fetchUser(this.props.userId);
-        console.log(res);
-        console.log(res.data.username)
-        return res.data.username;
-    }
-
 
     render(){
         const {userId, posts} = this.props
@@ -35,7 +27,7 @@ class Profile extends React.Component {
                 <div className='body-container'>
                 <div className='post-body-container'>
                     <div className='post-headline-1'>
-                        <div className="profile-name">{this.getUser(userId)}'s posts</div>
+                        <div className="profile-name">{this.state.user}'s posts</div>
                         <ul className='posts-index'>
                         {
                             
@@ -73,3 +65,11 @@ class Profile extends React.Component {
     }
 }
 export default Profile;
+
+    // async getUser(userId){
+    //     // debugger
+    //     const res = await UserUtil.fetchUser(this.props.userId);
+    //     console.log(res);
+    //     console.log(res.data.username)
+    //     return res.data.username;
+    // }
