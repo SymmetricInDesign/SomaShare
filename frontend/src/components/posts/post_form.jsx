@@ -21,8 +21,7 @@ class PostForm extends React.Component{
             this.props.history.push("/")
         }else{
             this.props.history.push(`/posts/${this.props.post._id}`)
-        }
-        
+        }      
     }
 
     update(field){
@@ -62,7 +61,7 @@ class PostForm extends React.Component{
                                     className="post-textbox"/>
                                 </label>
                                 <label className="post-label">Link
-                                    <input type="string" 
+                                    <input type="url" 
                                     value={this.state.link}
                                     onChange={this.update('link')} 
                                     className="post-input"/>
