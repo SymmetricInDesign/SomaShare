@@ -37,7 +37,13 @@ class Profile extends React.Component {
                 </div>
             )}else{
                 return(
+                    <div className='body-container'>
+                    <div className='post-body-container'>
+                        <div className='post-headline-1'>
                     <div className="profile-name">{this.props.username}</div>
+                    </div>
+                    </div>
+                    </div>
                 )
            
             }
