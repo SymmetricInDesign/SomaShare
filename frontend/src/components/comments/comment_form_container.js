@@ -6,7 +6,7 @@ import { createComment, fetchComment } from '../../actions/comment_actions'
 const mSTP = (state, ownProps) => {
     return {
         post_id: ownProps.postId,
-        username: state.session.user.username,
+        username: state.session.user ? state.session.user.username : undefined,
         // user_id: state.session.user.id,
     }
 }
