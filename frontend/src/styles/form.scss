@@ -61,9 +61,18 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     color:white;
+    // margin: 0;
     /* -webkit-box-shadow: 0 8px 6px -6px black;
     -moz-box-shadow: 0 8px 6px -6px black;
          box-shadow: 0 8px 6px -6px black; */
+}
+
+.demo-user-btn{
+    width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 300;
+    // margin: 0;
 }
 
 /* .login-submit-btn:hover{
