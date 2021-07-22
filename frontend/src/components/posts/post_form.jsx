@@ -11,12 +11,14 @@ class PostForm extends React.Component{
         this.update = this.update.bind(this)
     }
     componentDidMount(){
-        if (this.props.formType == "Update Post")  this.props.fetchPost(this.props.match.params.postId)
+        if (this.props.formType === "Update Post")  this.props.fetchPost(this.props.match.params.postId)
     }
     handleSubmit(e){
         e.preventDefault();
         // console.log(this.state)
         this.props.action(this.state);
+        this.props.formType === 'Create Post' ? this.props.history.push(`/`)
+        : this.props.history.push(`/posts/${this.props.post._id}`)
         
     }
 
