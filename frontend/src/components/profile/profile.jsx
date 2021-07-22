@@ -5,12 +5,15 @@ import {Link} from 'react-router-dom';
 class Profile extends React.Component {
 
     componentDidMount(){
-        this.props.fetchPostsForUser(this.props.currentUser)
+        this.props.fetchPostsForUser(this.props.currentUserId)
+        // this.props.fetch
     }
 
 
     render(){
         console.log(this.props)
+        // console.log("hello")
+        // console.log(this.props.currentUserId)
         if (this.props.posts && this.props.posts.length > 0){
             const {posts} = this.props
             return(
@@ -24,6 +27,7 @@ class Profile extends React.Component {
                             
                             posts.map(post => (
                                 <PostIndexItem
+                                currentUserId = {this.props.currentUserId}
                                 key={post._id}
                                 post={post}
                                 />
@@ -40,7 +44,10 @@ class Profile extends React.Component {
                     <div className='body-container'>
                     <div className='post-body-container'>
                         <div className='post-headline-1'>
-                    <div className="profile-name">{this.props.username}</div>
+                    <div className="profile-name">{this.props.username}
+                        <div className="no-post">No Posts</div>
+                    </div>
+
                     </div>
                     </div>
                     </div>
