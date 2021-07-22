@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
 const users = require("./routes/api/users");
 const posts = require("./routes/api/posts");
+const comments = require("./routes/api/comments")
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const path = require('path');
@@ -30,6 +31,7 @@ require('./config/passport')(passport);
 
 app.use("/api/users", users);
 app.use("/api/posts", posts);
+app.use("/api/comments", comments)
 
 const port = process.env.PORT || 5000;
 

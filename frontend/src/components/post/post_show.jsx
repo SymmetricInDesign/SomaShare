@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CommentFormContainer from '../comments/comment_form_container';
 
 class PostShow extends React.Component{
      constructor(props){
@@ -62,9 +63,10 @@ class PostShow extends React.Component{
                  </div>
 
                 <div className='post-comment'>
-                    <p>
-                        comment 
-                    </p>
+                        Comments:
+
+                        <CommentFormContainer/> 
+
                 </div>
 
             </div>
