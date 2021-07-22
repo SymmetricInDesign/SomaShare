@@ -22,6 +22,8 @@ $theme-green-hover: #3dd3b2;
     }
 }
 
+
+
 .search{
     display: flex;
     justify-content: center;
@@ -113,68 +115,187 @@ $theme-green-hover: #3dd3b2;
         border-color: $theme-green-hover;  
     }
 }
-
-.select2-dropdown.select2-dropdown--below{
+#root > div.NavBar > div.search > div > div > div{
     background-color: $theme-green;
-    &:hover{
-        background-color: $theme-green-hover;
+    height: 20px;
+}
+.react-select-container{
+    background-color: $theme-green;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.react-select__control{
+    width: 112px;
+    height: 10px;
+    min-height: 0;
+    overflow: hidden;
+    background-color: $theme-green;
+    div{
+        background-color: $theme-green
     }
 }
-
-body > span > span > span.select2-results{
+#root > div.NavBar > div.search .react-select__option{
+    background-color: $theme-green;
+    // margin-left: 3px;
+    overflow: visible;
+    // padding-right: 9px;
+    &:first-of-type{
+        border-top-left-radius: 15px;
+    }
+}
+#root > div.NavBar > div.search .react-select__menu-list{
+    overflow: hidden;
+    background-color: $theme-green;
+    margin-top: -36px;
+    margin-left: -1px;
+    border-top-left-radius: 15px;
+    padding: 0;
+    // padding-right: 4px;
+}
+#root > div.NavBar > div.search .react-select__option--is-focused{
+    background-color:
+     $theme-green-hover;
+}
+#root > div.NavBar > div.search .react-select__control--menu-is-open{
+    background-color: $theme-green;
+}
+#root > div.NavBar > div.search > div > div > div{
+    // height: 28px;
+    min-height: 28px;
+    border-bottom-left-radius: 14px;
+    border-top-left-radius: 14px;
+    outline: none;
     border: none;
+    box-shadow: none;
 }
 
-.select2-dropdown{
-    border: 1px solid lightgray;
+#root > div.NavBar > div.search > div > div{
+    border-bottom-left-radius: 14px;
+    border-top-left-radius: 14px;
+}
+#root > div.NavBar > div.search > div > div > div > div.react-select__indicators.css-1hb7zxy-IndicatorsContainer{
+    
+}
+#root > div.NavBar > div.search > div > div > div > div.react-select__indicators.css-1hb7zxy-IndicatorsContainer{
+    height: 25px;
+    border-bottom-left-radius: 14px;
+    border-top-left-radius: 14px;
+}
+#root > div.NavBar > div.search > div > div > div > div.react-select__value-container.react-select__value-container--has-value.css-g1d714-ValueContainer{
+    height: 25px;
+    border-bottom-left-radius: 14px;
+    border-top-left-radius: 14px;
+}
+#root > div.NavBar > div.search > div > div > div > div.react-select__indicators.css-1hb7zxy-IndicatorsContainer > div{
+    // height: 30px;
+    padding: 0;
+    color: rgb(255, 255, 255);
 }
 
-#select2-category-select-results li{
-    background-color: $theme-green;
-    font-weight: 600;
-    border-top: 1px solid $theme-green-hover;
-    &:hover{
-        background-color: $theme-green-hover;
-    }
-}
-
-body > span > span > span.select2-search.select2-search--dropdown{
+#root > div.NavBar > div.search > div > div > div > div.react-select__indicators.css-1hb7zxy-IndicatorsContainer > span{
     display: none;
 }
+#root > div.NavBar > div.search > div > div > div > div.react-select__value-container.react-select__value-container--has-value.css-g1d714-ValueContainer{
+    display: flex;
+    justify-content: center;
+    // position: relative;
+    // div{
+    //     position: absolute;
+    //     left: 44px;
+    // }
+}
+// #root > div.NavBar > div.search > div > div{
+//     display: flex;
+// }
 
-#select2-category-select-container{
-    color: white;
+// #root > div.NavBar > div.search > div > div > div{
+//     width: 100px;
+// }
 
+.react-select-container{
+    // background-color: $theme-green-hover;
+    // .react-select-container__control{
+    //     background-color: $theme-green-hover;
+    // }
+    // .react-select__menu{
+    //     background-color: $theme-green-hover;
+    // }
 }
 
+// .select2-dropdown.select2-dropdown--below{
+//     background-color: $theme-green;
+//     &:hover{
+//         background-color: $theme-green-hover;
+//     }
+// }
+
+// body > span > span > span.select2-results{
+//     border: none;
+// }
+
+// .select2-dropdown{
+//     border: 1px solid lightgray;
+// }
+
+// #select2-category-select-results li{
+//     background-color: $theme-green;
+//     font-weight: 600;
+//     border-top: 1px solid $theme-green-hover;
+//     &:hover{
+//         background-color: $theme-green-hover;
+//     }
+// }
+
+// body > span > span > span.select2-search.select2-search--dropdown{
+//     display: none;
+// }
+
+// #select2-category-select-container{
+//     color: white;
+
+// }
 
 
-.select2-container--default .select2-selection--single{
-    border: 1px solid $theme-green;
-    border-radius: 14px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    font-size: 1.2em;  
-    position: relative;
-    background-color: $theme-green;
-    color: white;
-    &:hover{
-        background-color: $theme-green-hover;
-        border-color: $theme-green-hover;
-        .select2-selection__arrow{
-            background-color: $theme-green-hover;
-        }
+
+// .select2-container--default .select2-selection--single{
+//     border: 1px solid $theme-green;
+//     border-radius: 14px;
+//     border-top-right-radius: 0px;
+//     border-bottom-right-radius: 0px;
+//     font-size: 1.2em;  
+//     position: relative;
+//     background-color: $theme-green;
+//     color: white;
+//     &:hover{
+//         background-color: $theme-green-hover;
+//         border-color: $theme-green-hover;
+//         .select2-selection__arrow{
+//             background-color: $theme-green-hover;
+//         }
+//     }
+// }
+
+// .select2-container--default .select2-selection--single .select2-selection__arrow {
+//     background-color: $theme-green;
+//     color: $theme-green;
+//     font-size: 1.3em;
+//     position: absolute;
+//     top: 0px;
+//     right: 0px;
+//     &:hover{
+//         background-color: $theme-green-hover;
+//     }
+// }
+
+@media (max-width: 500px){
+    .login-nav-btn{
+        display: none;
     }
-}
-
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-    background-color: $theme-green;
-    color: $theme-green;
-    font-size: 1.3em;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    &:hover{
-        background-color: $theme-green-hover;
+    .NavBar{
+        justify-content: space-between;
+    }
+    .search{
+        position: relative;
     }
 }
