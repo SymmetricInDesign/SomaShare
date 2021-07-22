@@ -33,7 +33,6 @@ render() {
                 {posts ? 
                 <ul className='posts-index'>
                         {posts.map((post)=>(
-                        
                             <PostIndexItem
                                 currentUserId = {this.props.currentUserId}
                                 key={post._id}

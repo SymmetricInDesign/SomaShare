@@ -1,5 +1,5 @@
 import React from 'react';
-import PostIndexItem from './post_index_item';
+import PostIndexItem from '../post/post_index_item';
 import {Link} from 'react-router-dom';
 
 class Profile extends React.Component {
