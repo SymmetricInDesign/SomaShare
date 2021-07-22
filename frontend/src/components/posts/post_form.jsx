@@ -12,6 +12,7 @@ class PostForm extends React.Component{
     }
     componentDidMount(){
         if (this.props.formType === "Update Post")  this.props.fetchPost(this.props.match.params.postId)
+        
     }
     handleSubmit(e){
         e.preventDefault();
@@ -57,7 +58,7 @@ class PostForm extends React.Component{
                                     className="post-textbox"/>
                                 </label>
                                 <label className="post-label">Link
-                                    <input type="string" 
+                                    <input type="url" 
                                     value={this.state.link}
                                     onChange={this.update('link')} 
                                     className="post-input"/>
