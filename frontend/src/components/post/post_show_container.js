@@ -8,7 +8,7 @@ const mSTP = (state, ownProps) => {
 
     return{
         post: state.entities.posts[ownProps.match.params.postId],
-        currentUserId: state.session.user.id
+        currentUserId: state.session.user ? state.session.user.id : undefined
     }
     
 

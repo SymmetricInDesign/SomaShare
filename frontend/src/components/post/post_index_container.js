@@ -8,7 +8,7 @@ const mSTP = (state={}) => {
     if (state.entities.posts) posts = Object.values(state.entities.posts)
     return {
         posts,
-        currentUserId: state.session.user.id
+        currentUserId: state.session.user ? state.session.user.id : undefined
     };
 };
 

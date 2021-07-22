@@ -1,6 +1,6 @@
 import { RECEIVE_COMMENT, RECEIVE_COMMENTS, REMOVE_COMMENT} from "../actions/comment_actions";
 
-const postsReducer = (state={}, action) => {
+const commentsReducer = (state={}, action) => {
     Object.freeze(state)
     let newState
     switch (action.type){
@@ -23,4 +23,4 @@ const postsReducer = (state={}, action) => {
     }
 }
 
-export default postsReducer
+export default commentsReducer
