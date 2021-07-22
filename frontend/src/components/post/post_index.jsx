@@ -35,6 +35,7 @@ render() {
                         {posts.map((post)=>(
                         
                             <PostIndexItem
+                                currentUserId = {this.props.currentUserId}
                                 key={post._id}
                                 post={post}
                                 />           
