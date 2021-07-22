@@ -11,6 +11,7 @@ import PostSearchContainer from '../components/search/post_search_container';
 import ProfileContainer from '../components/profile/profile_container'
 import { Switch, Route } from 'react-router-dom';
 import "../styles/styles.scss"
+import CommentFormContainer from './comments/comment_form_container';
 
 const App = () => (
     <>
@@ -22,6 +23,7 @@ const App = () => (
             <ProtectedRoute exact path='/posts/new' component={CreatePostContainer}/>
             <ProtectedRoute exact path='/posts/:postId/edit' component={UpdatePostContainer}/>
             <ProtectedRoute exact path='/users/:userId' component={ProfileContainer}/>
+            <ProtectedRoute exact path='comments/:commentId' component={CommentFormContainer} />
             <Route exact path="/posts/:postId" component={PostShowContainer}/>
             <Route exact path="/" component={PostIndexContainer} />
         </Switch>
