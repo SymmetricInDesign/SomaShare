@@ -8,7 +8,8 @@ class NavBar extends React.Component {
         this.logoutUser = this.logoutUser.bind(this);
     }
     logoutUser(e) {
-        e.preventDefault();
+        // console.log(this.props)
+        // this.props.history.replace("/") 
         this.props.logout();
     }
 
@@ -19,7 +20,7 @@ class NavBar extends React.Component {
               <div className="session-btn-nav">
                   
                   <Link className="user-profile-btn" to={`/users/${this.props.user.id}`}>Hello {this.props.username}!</Link>
-                  <div className="login-nav-btn" onClick={()=>this.props.logout()}>Logout</div>
+                  <div className="login-nav-btn" onClick={this.logoutUser}>Logout</div>
                  
               </div>
           );

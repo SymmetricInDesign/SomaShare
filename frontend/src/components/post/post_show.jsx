@@ -14,6 +14,11 @@ class PostShow extends React.Component{
 
    }
 
+   deletePostAndRedirect(){
+        this.props.deletePost(this.props.post._id)
+        this.props.history.push("/")
+   }
+
    render(){
        
        const {post, currentUserId, deletePost} = this.props
@@ -38,7 +43,7 @@ class PostShow extends React.Component{
                         <div className='post-show-btns' id={show_flag}>
                         <div className="post-show-edit-delete">
                         <Link className='post-show-edit' to={`/posts/${post._id}/edit`}>Edit</Link>
-                        <div className='post-show-delete' onClick={() => { if (window.confirm('Are you sure you want to delete this post?')) deletePost(post._id) } }>Delete</div>
+                        <div className='post-show-delete' onClick={() => { if (window.confirm('Are you sure you want to delete this post?')) this.deletePostAndRedirect() } }>Delete</div>
                         </div>
                         </div>
                    </div>
