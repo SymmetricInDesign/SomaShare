@@ -5,11 +5,14 @@ import {Link} from 'react-router-dom';
 class Profile extends React.Component {
 
     componentDidMount(){
-        this.props.fetchPostsForUser(this.props.currentUser)
+        // this.props.fetchPostsForUser(this.props.currentUser)
+        // console.log(this.props.Id)
+        this.props.fetchPostsForUser(this.props.userId)
     }
 
 
     render(){
+        
         console.log(this.props)
         if (this.props.posts && this.props.posts.length > 0){
             const {posts} = this.props
