@@ -7,6 +7,7 @@ const mSTP = (state, ownProps) => {
     return{
         loggedIn: state.session.isAuthenticated, 
         user: state.session.user,
+        username: state.session.user.username,
     }
 }
 

@@ -98,3 +98,26 @@
     font-weight: bold;
     border:none;
 }
+
+.session-btn-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.user-profile-btn{
+    font-family: 'Montserrat', sans-serif;
+    color: #1cc29f;
+    font-weight: bold;
+    text-decoration: none;  
+    margin-right:5px; 
+}
+
+.user-profile-btn:hover{
+    font-family: 'Montserrat', sans-serif;
+    color: #3dd3b2;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right:5px;
+}

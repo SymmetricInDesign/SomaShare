@@ -3,6 +3,7 @@
     flex-direction: column;
     overflow: auto;
   background-color: #F8F8F8;
+
 }
 
 .post-body-container{
@@ -15,6 +16,8 @@
     height:33.3%;
     font-size: 40px;
     font-family: 'Montserrat', sans-serif;
+
+
 
 }
 
@@ -45,12 +48,13 @@
   margin-top: 20px;
   font-size: 16px;
   font-family: Lato;
+
  
 }
 
 .posts-index{
   margin-top: 10px;
-  background-color: white;
+  background-color: none;
   display:flex;
   flex-direction:column-reverse;
 }
@@ -85,6 +89,13 @@
     color: #333333;
     min-height: 32px;
     align-items: center;
+    border-radius: 15px;
+    background-color: white;
+    outline: none;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+         box-shadow: 0 8px 6px -6px black;
+    margin-bottom: 5px;
 }
 
 .post-left > p {
@@ -247,4 +258,49 @@
   text-decoration: none;
   cursor:pointer;
   font-size: 14px;
+}
+
+.create-post-index{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-show-edit, .post-show-delete{
+  border: none;
+  text-decoration: none;
+  margin-left: 3px;
+  margin-right: 3px;
+  border-radius: 20px;
+  background-color: #1cc29f;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.post-show-edit:hover, .post-show-delete:hover{
+  text-decoration: none;
+  margin-left: 3px;
+  margin-right: 3px;
+  border-radius: 20px;
+  background-color: #3dd3b2;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: bold;
+  border:none;
+}
+
+.post-show-edit-delete{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

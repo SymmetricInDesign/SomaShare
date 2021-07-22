@@ -1,5 +1,5 @@
 import React from 'react';
-// import {Link} from 'react-router-dom';  
+import {Link} from 'react-router-dom';  
 import PostIndexItem from './post_index_item'
 
 
@@ -22,9 +22,13 @@ render() {
                 {/* <img className='transit-icon' src="/images/index_2.jpeg" alt="books" /> */}
     
             </div> 
+
       
             <div className='post-headline-1'>
+                <div className="create-post-index">
                 <h2>Newest</h2>
+                <Link className="login-nav-btn" to={'/posts/new'}>Create Post</Link>
+                </div>
                 {/* <div>Hello</div> */}
                 {posts ? 
                 <ul className='posts-index'>
