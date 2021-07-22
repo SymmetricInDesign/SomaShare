@@ -1,6 +1,8 @@
 import {connect} from 'react-redux';
 import Profile from './profile.jsx';
-import { fetchPostsForUser } from '../../actions/post_actions';
+import { fetchPostsForUser, fetchPost, deletePost } from '../../actions/post_actions';
+import{withRouter} from 'react-router'
+import PostIndex from '../post/post_index.jsx';
 
 const mSTP = (state, ownProps) => {
     // debugger
@@ -14,8 +16,10 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
     return {
-        fetchPostsForUser: userId => dispatch(fetchPostsForUser(userId))
+        fetchPostsForUser: userId => dispatch(fetchPostsForUser(userId)),
+        // fetchPost: (postId) => dispatch(fetchPost(postId)),
+        deletePost: (postId) => dispatch(deletePost(postId))
     }
 }
 
-export default connect(mSTP, mDTP)(Profile)
+export default withRouter(connect(mSTP, mDTP)(Profile))

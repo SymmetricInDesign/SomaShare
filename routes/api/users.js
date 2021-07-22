@@ -26,6 +26,23 @@ router.get("/:user_id/posts", (req, res) => {
         )
 })
 
+router.get("/:user_id/comments", (req, res) => {
+  Post.find({user: req.params.user_id})
+    .sort({date: 1})
+    .then(comments => res.json(comments))
+    .catch(err => 
+        res.status(404).json({nocommentsfound: "No comments found from this user."})
+      )
+})
+
+router.get("/:user_id", (req, res) => {
+  User.findById(req.params.user_id)
+  .then(user => res.json(user))
+  .catch(err => 
+    res.status(404).json({nouserfound: "No user found with that id"})  
+  )
+})
+
 router.post("/register", (req, res) => {
     const { errors, isValid } = validateRegisterInput(req.body);
   

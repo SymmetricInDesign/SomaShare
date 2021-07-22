@@ -1,11 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {withRouter} from 'react-router';
+
 class PostIndexItem extends React.Component{
 
     constructor(props){
         super(props);
+        this.showFlag = false;
         this.getDate= this.getDate.bind(this);
+
     }
+
+    deletePostAndRedirect(){
+        this.props.deletePost(this.props.post._id)
+        this.props.history.push("/")
+   }
       getDate() {
         const { post } = this.props
         const monthHead = {
@@ -33,7 +42,16 @@ class PostIndexItem extends React.Component{
     }  
 
     render(){
-        const {post} = this.props
+        const {post, currentUserId, deletePost} = this.props
+        console.log(currentUserId)
+        console.log(post.user)
+        if(!post){
+           return null;
+       }
+
+       currentUserId === post.user ? this.showFlag=true : this.showFlag=false;
+     
+       const show_flag = this.showFlag ? 'show' : 'not-show';
         return(
         <li>
             <div className="post-details">
@@ -43,8 +61,14 @@ class PostIndexItem extends React.Component{
                     </div>
                     <div className='post-right'>
                         <Link className='post-right-1'to={`/posts/${post._id}`}>{post.title}</Link>
+                        {/* <div className='post-show-btns' id={show_flag}>
+                        <div className="post-show-edit-delete">
+                        <Link className='post-show-edit' to={`/posts/${post._id}/edit`}>Edit</Link>
+                        <div className='post-show-delete' onClick={() => { if (window.confirm('Are you sure you want to delete this post?')) this.deletePostAndRedirect() } }>Delete</div> 
+                        </div> */}
                         <p className='post-right-2'>{this.props.post.description}</p>
-
+                        {/* </div> */}
+                        
                     </div>
                 
                 </div>
@@ -55,4 +79,4 @@ class PostIndexItem extends React.Component{
     }
 }
 
-export default PostIndexItem
+export default withRouter(PostIndexItem)

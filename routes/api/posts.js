@@ -19,8 +19,8 @@ router.get("/", (req,res)=> {
     }else if (category == "All" && searchText != "-1"){
         console.log(searchText)
         Post.find().where({$or: [
-            {title: new RegExp(`${searchText}`)},
-            {description: new RegExp(`${searchText}`)}
+            {title: new RegExp(`${searchText}`, "i")},
+            {description: new RegExp(`${searchText}`, "i")}
         ]})
         .sort({ date: -1 })
         .then( posts => res.json(posts))
@@ -34,8 +34,8 @@ router.get("/", (req,res)=> {
         Post.find().where(
             {$and: [
                 {$or: [
-                    {title: new RegExp(`${searchText}`)},
-                    {description: new RegExp(`${searchText}`)}
+                    {title: new RegExp(`${searchText}`, "i")},
+                    {description: new RegExp(`${searchText}`, "i")}
                 ]},
                     {category: category}
             ]}
@@ -112,6 +112,16 @@ router.delete("/:id", (req, res)=>{
         .catch(err => 
             res.status(404).json({ nopostfound: "No post found with that id"}) 
         )
+})
+
+//Comment Index
+router.get("/:postId/comments", (req,res)=> {
+    Comment.find({postId: req.params.postId})
+    .sort({date: 1})
+    .then(comments => res.json(comments))
+    .catch(err => 
+        res.status(404).json({nocommentsfound: "No comments found for this post."})
+    )
 })
 
 module.exports = router;
