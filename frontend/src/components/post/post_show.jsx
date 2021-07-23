@@ -65,16 +65,20 @@ class PostShow extends React.Component{
                     </div>
                         
                  </div>
-                {this.props.currentUserId ? 
+                
                 <div className='post-comment'>
-                        Comments:
-                        <CommentIndexContainer postId={post._id}/>
-                        <CommentFormContainer postId={post._id}/> 
-
-                </div>
+                {this.props.currentUserId ? 
+                        <div className="comment-comment">Write a Comment
+                        <CommentFormContainer postId={post._id}/></div>
                 :
                 null
                 }
+                        <div className='comment-header'>Comments</div> 
+                        <CommentIndexContainer postId={post._id}/>
+                        
+
+                </div>
+
 
             </div>
         </div>
