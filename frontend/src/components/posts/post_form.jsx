@@ -15,8 +15,7 @@ class PostForm extends React.Component{
     }
     handleSubmit(e){
         e.preventDefault();
-        // console.log(this.state)
-        this.props.action(this.state);
+        this.props.action(this.state)
         if (this.props.formType === 'Create Post') {
             this.props.history.push("/")
         }else{

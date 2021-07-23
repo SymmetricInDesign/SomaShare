@@ -3,6 +3,8 @@ import * as ApiUtil from "../util/posts_api_util"
 export const RECEIVE_POSTS = "RECEIVE_POSTS"
 export const RECEIVE_POST = "RECEIVE_POST"
 export const REMOVE_POST = "REMOVE_POST"
+export const RECEIVE_POST_ERRORS = "RECEIVE_POST_ERRORS"
+
 
 export const receivePosts = (posts)=>({
     type: RECEIVE_POSTS,
@@ -16,6 +18,11 @@ export const removePost = (postId)=>({
     type: REMOVE_POST,
     postId
 })
+export const receivePostErrors = errors => ({
+    type: RECEIVE_POST_ERRORS,
+    errors
+});
+
 
 export const fetchPosts = (category="All", searchText="-1") => dispatch => (
     ApiUtil.fetchPosts(category, searchText).then(res=>dispatch(receivePosts(Object.values(res.data))))
@@ -31,6 +38,9 @@ export const fetchPost = (postId) => dispatch=>(
 
 export const createPost = (post)=>dispatch=>(
     ApiUtil.createPost(post).then(res=>dispatch(receivePost(res.data)))
+    .catch(err => {
+        dispatch(receivePostErrors(err.response.data));
+    })
 )
 
 export const updatePost = post => dispatch => (

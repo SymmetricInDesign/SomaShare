@@ -12,6 +12,7 @@ const mSTP = (state, ownProps) => {
             description: '',
             link: '', 
         }, 
+        errors: Object.values(state.errors.posts),
         username: state.session.user.username,
         formType: 'Create Post'
     }
