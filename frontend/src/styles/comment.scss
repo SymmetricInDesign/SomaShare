@@ -2,6 +2,9 @@
     background-color: #f0eeee;
     margin-top: 20px;
     font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
+    color:rgb(85, 85, 85);
+    font-size:14px;
 }
 
 .comment-form-container{
@@ -9,7 +12,7 @@
     background-color: #F8F8F8;
     display:flex;
     align-items: center;
-    margin-left:200px;
+    flex-direction: column;
 }
 
 .comment-submit-btn{
@@ -17,8 +20,20 @@
     margin-left:90px;
     margin-top:5px;
     border-radius: 20px;
+    background-color: #1cc29f;
+    color:white;
 
 }
+
+.comment-submit-btn:hover{
+    background-color: #3dd3b2;
+}
+
+.comment-textarea{
+    border: 1px solid grey;
+    // box-shadow: 3px -3px  #1cc29f;
+}
+
 // .comment-textarea{
 //     background-color: green;
 // }
