@@ -15,10 +15,9 @@ class PostForm extends React.Component{
     }
     handleSubmit(e){
         e.preventDefault();
+        this.props.action(this.state)
         if (this.props.formType === 'Create Post') {
-            this.props.action(this.state).then((res)=>{
-                if (this.props.errors.length < 1) this.props.history.push("/")
-            })
+            this.props.history.push("/")
         }else{
             this.props.history.push(`/posts/${this.props.post._id}`)
         }      
