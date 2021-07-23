@@ -1,4 +1,6 @@
 import { connect} from 'react-redux';
+import { updateComment } from '../../actions/comment_actions';
+import EditCommentForm from './edit_comment_form'
 
 
 const mSTP = (state, ownProps) => {

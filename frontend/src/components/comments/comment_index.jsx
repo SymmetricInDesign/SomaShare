@@ -18,6 +18,8 @@ class CommentIndex extends React.Component{
                         <CommentIndexItem
                         key={comment._id}
                         comment={comment}
+                        postId={this.props.postId}
+                        deleteComment = {this.props.deleteComment}
                         />
                     ))
                     }

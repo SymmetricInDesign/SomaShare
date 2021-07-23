@@ -49,12 +49,13 @@ router.patch("/:id",
         // if (!isValid) {
         //     return res.status(400).json(errors);
         // }
-        console.log(req.body)
+        // console.log(req.body)
         const body = req.body
         const {commentBody} = body
-        console.log(req.params)
-        Post.findById(req.params.id).then(comment=>{
-            commentBody = commentBody
+        // console.log(req.params)
+        Comment.findById(req.params.id).then(comment=>{
+            // console.log(comment)
+            comment.commentBody = commentBody
             comment.save()
             res.json(comment)
         }).catch(err=>res.status(404).json({error: err}))
