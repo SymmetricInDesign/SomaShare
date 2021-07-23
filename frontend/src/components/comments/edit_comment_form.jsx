@@ -11,7 +11,6 @@ class EditCommentForm extends React.Component{
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.updateBody = this.updateBody.bind(this)
-        console.log(props)
     }
 
     handleSubmit(e){
@@ -21,7 +20,6 @@ class EditCommentForm extends React.Component{
     }
 
     updateBody(e){
-        console.log(this.state)
         this.setState({commentBody: e.target.value})
     }
 

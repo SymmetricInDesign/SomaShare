@@ -1,5 +1,4 @@
 import {UPDATE_BOUNDS} from '../actions/filter_actions'
-// const defaultState = {bounds: {searchText: "-1", category: "All"}}
 
 const filterReducer = (state={bounds: {searchText: "-1", category: "All"}}, action) => {
     Object.freeze(state)

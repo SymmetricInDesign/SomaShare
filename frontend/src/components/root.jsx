@@ -12,5 +12,3 @@ const Root = ({ store }) => (
 );
 
 export default Root;
-
-// npm i react-redux react-router-dom react-router

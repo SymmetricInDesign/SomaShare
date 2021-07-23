@@ -25,7 +25,6 @@ class PostForm extends React.Component{
         e.preventDefault();
         this.props.action(this.state)
         if (this.props.formType === 'Create Post') {
-            // this.props.history.push("/")
         }else{
             this.props.history.push(`/posts/${this.props.post._id}`)
         }      
@@ -49,23 +48,14 @@ class PostForm extends React.Component{
         )
     }
     render(){
-        // const postErrorDivs = this.props.errors.map(err => <div className="error-el">{err}</div> )
         const categoryOptions = CATEGORIES.map((category, idx)=>(
             <option key={idx} value={category}>{category[0].toUpperCase() + category.slice(1)}</option>
         ))
-        // if (!this.state.title && this.props.post){
-        //     this.setState({title: this.props.post.title, description: this.props.post.description, link: this.props.post.link})
-        // }
+
         if (this.state) {
             return (
                 <div className="form-window">
-                    {/* {postErrorDivs.length > 0 ? 
-                        <div className="errors-container">
-                            {postErrorDivs}
-                        </div>
-                    :
-                        null
-                    } */}
+                   
                     <div className="form-box">
 
                         <h2 className="form-type">{this.props.formType}</h2>

@@ -9,15 +9,12 @@ const validatePostInput = require('../../validation/posts');
 //index
 router.get("/", (req,res)=> {
     const {category, searchText} = req.query
-    console.log(req.query)
     if (category == "All" && searchText=="-1"){
-        debugger
         Post.find()
         .sort({ date: -1 })
         .then( posts => res.json(posts))
         .catch(err => res.status(404).json({nopostsfound: 'No Posts Found'}))
     }else if (category == "All" && searchText != "-1"){
-        console.log(searchText)
         Post.find().where({$or: [
             {title: new RegExp(`${searchText}`, "i")},
             {description: new RegExp(`${searchText}`, "i")}
@@ -48,10 +45,8 @@ router.get("/", (req,res)=> {
 })
 //show
 router.get("/:id", (req, res) => {
-    console.log(req.params.id)
     Post.findById(req.params.id)
         .then(post => {
-            console.log(post)
             return res.json(post)})
         .catch(err => 
             res.status(404).json({ nopostfound: "No post found with that id"})
@@ -62,7 +57,6 @@ router.get("/:id", (req, res) => {
 router.post("/", 
     passport.authenticate('jwt', { session: false}),
     (req, res) => {
-        // console.log(req)
         const {errors, isValid} = validatePostInput(req.body)
 
         if (!isValid) {
@@ -86,10 +80,8 @@ router.patch("/:id",
         if (!isValid) {
             return res.status(400).json(errors);
         }
-        console.log(req.body)
         const body = req.body
         const {title, category, description, link} = body
-        console.log(req.params)
         Post.findById(req.params.id).then(post=>{
             post.title = title
             post.category = category
@@ -99,7 +91,6 @@ router.patch("/:id",
             post.save()
             res.json(post)
         }).catch(err=>res.status(404).json({error: err}))
-        // console.log(post.title)
     }
 )
 //delete

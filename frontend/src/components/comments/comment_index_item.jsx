@@ -1,5 +1,6 @@
 import React from 'react';
 import EditCommentFormContainer from './edit_comment_form_container'
+import {Link} from 'react-router-dom'
 
 
 class CommentIndexItem extends React.Component{
@@ -15,12 +16,14 @@ class CommentIndexItem extends React.Component{
     }
 
     render(){
-        const {comment} = this.props
+      const {comment} = this.props
       if (!this.state.editing){
           return(
               <div className='comment-index-item'>
               <div className="comment-content">
-                  <div className='comment-username'>{comment.username}:</div>
+                  <Link to={`/users/${comment.user}`}>
+                      <div className='comment-username'>{comment.username}</div>
+                  </Link>
                   <div className='comment-body'>{comment.commentBody}</div>
               </div>
               {comment.user == this.props.currentUserId ? 

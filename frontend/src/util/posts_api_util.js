@@ -2,7 +2,6 @@ import axios from 'axios'
 
 export const fetchPosts = (category="All", searchText="-1") => {
     const search = {category, searchText}
-    // console.log(search)
     return axios.get('/api/posts', {params: search});
 };
 export const fetchPostsForUser = (userId) => {

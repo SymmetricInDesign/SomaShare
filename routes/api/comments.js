@@ -9,10 +9,8 @@ const Comment = require('../../models/Comment');
 
 //show
 router.get("/:id", (req, res) => {
-    console.log(req.params.id)
     Comment.findById(req.params.id)
         .then(comment => {
-            console.log(comment)
             return res.json(comment)})
         .catch(err => 
             res.status(404).json({ nocommentfound: "No comment found with that id"})
@@ -23,7 +21,6 @@ router.get("/:id", (req, res) => {
 router.post("/", 
     passport.authenticate('jwt', { session: false}),
     (req, res) => {
-        console.log(req.body)
         // const {errors, isValid} = validatePostInput(req.body)
 
         // if (!isValid) {
@@ -31,9 +28,7 @@ router.post("/",
         // }
         const user = req.user.id
         const body = req.body
-        // console.log(body)
         const {commentBody, username, postId} = body
-        // console.log(title)
         const newComment = new Comment({user, commentBody, username, postId})
 
         newComment.save().then( comment => res.json(comment))
@@ -49,17 +44,13 @@ router.patch("/:id",
         // if (!isValid) {
         //     return res.status(400).json(errors);
         // }
-        // console.log(req.body)
         const body = req.body
         const {commentBody} = body
-        // console.log(req.params)
         Comment.findById(req.params.id).then(comment=>{
-            // console.log(comment)
             comment.commentBody = commentBody
             comment.save()
             res.json(comment)
         }).catch(err=>res.status(404).json({error: err}))
-        // console.log(post.title)
     }
 )
 //delete
