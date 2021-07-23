@@ -22,7 +22,7 @@ const App = () => (
             <Route path="/posts/search" component={PostSearchContainer} />
             <ProtectedRoute exact path='/posts/new' component={CreatePostContainer}/>
             <ProtectedRoute exact path='/posts/:postId/edit' component={UpdatePostContainer}/>
-            <ProtectedRoute exact path='/users/:userId' component={ProfileContainer}/>
+            <Route exact path='/users/:userId' component={ProfileContainer}/>
             <ProtectedRoute exact path='comments/:commentId' component={CommentFormContainer} />
             <Route exact path="/posts/:postId" component={PostShowContainer}/>
             <Route exact path="/" component={PostIndexContainer} />
