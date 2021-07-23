@@ -70,9 +70,7 @@ router.post("/",
         }
         const user = req.user.id
         const body = req.body
-        // console.log(body)
         const {title, category, description, link, username} = body
-        // console.log(title)
         const newPost = new Post({user, title, category, description, link, username})
 
         newPost.save().then( post => res.json(post))

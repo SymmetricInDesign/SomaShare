@@ -8,8 +8,6 @@ class NavBar extends React.Component {
         this.logoutUser = this.logoutUser.bind(this);
     }
     logoutUser(e) {
-        // console.log(this.props)
-        // this.props.history.replace("/") 
         this.props.logout();
         this.props.history.push("/login")
     }
