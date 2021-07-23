@@ -5,7 +5,8 @@ import { fetchCommentsForPost, deleteComment } from '../../actions/comment_actio
 const mSTP = (state, ownProps) => {
     return {
         comments: Object.values(state.entities.comments),
-        postId: ownProps.postId
+        postId: ownProps.postId,
+        currentUserId: state.session.user ? state.session.user.id : null,
     }
 }
 

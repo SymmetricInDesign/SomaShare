@@ -31,8 +31,8 @@ class EditCommentForm extends React.Component{
         return(
             <div className="comment-index-item">
                 <form className='comment-form-container' onSubmit={this.handleSubmit}>
-                    <div className='comment-textarea'><textarea value={this.state.commentBody} onChange={this.updateBody}/></div>
-                    <input className='comment-submit-btn comment-edit-submit-btn' type='submit' />
+                    <div className='comment-textarea'><textarea value={this.state.commentBody} onChange={this.updateBody} maxLength="600"/></div>
+                    <input className='comment-submit-btn' type='submit' />
                 </form>
             </div>
         )

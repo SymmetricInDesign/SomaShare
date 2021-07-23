@@ -302,6 +302,7 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
+  -webkit-box-shadow: inset 0 0 9px #086952;
 }
 .post-show-edit:hover, .post-show-delete:hover{
   text-decoration: none;

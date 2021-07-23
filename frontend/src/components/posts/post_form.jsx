@@ -14,10 +14,12 @@ class PostForm extends React.Component{
         if (this.props.formType === "Update Post")  this.props.fetchPost(this.props.match.params.postId)
     }
     componentWillReceiveProps(nextProps) {
-        if (nextProps.errors.length < 1) {
-          this.props.history.push('/');
+        if (this.props.formType === 'Create Post'){
+            if (nextProps.errors.length < 1) {
+              this.props.history.push('/');
+            }
+            this.setState({errors: nextProps.errors})
         }
-        this.setState({errors: nextProps.errors})
       }
     handleSubmit(e){
         e.preventDefault();
@@ -91,7 +93,12 @@ class PostForm extends React.Component{
                                     onChange={this.update('link')} 
                                     className="post-input"/>
                                 </label>
-                                <div className='signup-form-errors'>{this.renderErrors()}</div>
+                                {this.props.formType === 'Create Post' ? 
+                                
+                                    <div className='signup-form-errors'>{this.renderErrors()}</div>
+                                :
+                                    null
+                                }
 
                                 <div onClick={this.handleSubmit} className="post-submit-btn">{this.props.formType}</div>
                         </form>

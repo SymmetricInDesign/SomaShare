@@ -20,6 +20,7 @@ class CommentIndex extends React.Component{
                         comment={comment}
                         postId={this.props.postId}
                         deleteComment = {this.props.deleteComment}
+                        currentUserId = {this.props.currentUserId}
                         />
                     ))
                     }
