@@ -13,6 +13,7 @@ render() {
   const {posts} = this.props
   return (
     <div className='body-container'>
+
         <div className='post-body-container'>
             <div className='post-headline'>
                

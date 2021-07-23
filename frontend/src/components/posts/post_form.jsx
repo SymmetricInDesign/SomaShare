@@ -13,11 +13,17 @@ class PostForm extends React.Component{
     componentDidMount(){
         if (this.props.formType === "Update Post")  this.props.fetchPost(this.props.match.params.postId)
     }
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors.length < 1) {
+          this.props.history.push('/');
+        }
+        this.setState({errors: nextProps.errors})
+      }
     handleSubmit(e){
         e.preventDefault();
         this.props.action(this.state)
         if (this.props.formType === 'Create Post') {
-            this.props.history.push("/")
+            // this.props.history.push("/")
         }else{
             this.props.history.push(`/posts/${this.props.post._id}`)
         }      
@@ -29,7 +35,19 @@ class PostForm extends React.Component{
             [field]: e.currentTarget.value,
         })
     }
+    renderErrors(){
+        return (
+            <ul>
+            {this.props.errors.map((error, i) => (
+              <li key={`error-${i}`}>
+                {error}
+              </li>
+            ))}
+          </ul>
+        )
+    }
     render(){
+        // const postErrorDivs = this.props.errors.map(err => <div className="error-el">{err}</div> )
         const categoryOptions = CATEGORIES.map((category, idx)=>(
             <option key={idx} value={category}>{category[0].toUpperCase() + category.slice(1)}</option>
         ))
@@ -39,7 +57,15 @@ class PostForm extends React.Component{
         if (this.state) {
             return (
                 <div className="form-window">
+                    {/* {postErrorDivs.length > 0 ? 
+                        <div className="errors-container">
+                            {postErrorDivs}
+                        </div>
+                    :
+                        null
+                    } */}
                     <div className="form-box">
+
                         <h2 className="form-type">{this.props.formType}</h2>
                         <form className="form-form" >
                                 <label className="post-label">Title
@@ -65,6 +91,8 @@ class PostForm extends React.Component{
                                     onChange={this.update('link')} 
                                     className="post-input"/>
                                 </label>
+                                <div className='signup-form-errors'>{this.renderErrors()}</div>
+
                                 <div onClick={this.handleSubmit} className="post-submit-btn">{this.props.formType}</div>
                         </form>
                     </div>

@@ -31,7 +31,12 @@
     justify-content: center;
     background-color: #1CC29F;
     width: 100%;
-    
+    .signup-form-errors{
+        margin: 0;
+        ul li{
+            font-size: 18px;
+        }
+    }
 }
 form.form-form label{
     width: 100%;

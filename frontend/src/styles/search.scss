@@ -115,6 +115,44 @@ $theme-green-hover: #3dd3b2;
         border-color: $theme-green-hover;  
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #root > div.NavBar > div.search > div > div > div{
     background-color: $theme-green;
     height: 20px;
@@ -137,9 +175,7 @@ $theme-green-hover: #3dd3b2;
 }
 #root > div.NavBar > div.search .react-select__option{
     background-color: $theme-green;
-    // margin-left: 3px;
     overflow: visible;
-    // padding-right: 9px;
     &:first-of-type{
         border-top-left-radius: 15px;
     }
@@ -155,7 +191,6 @@ $theme-green-hover: #3dd3b2;
     margin-left: -1px;
     border-top-left-radius: 15px;
     padding: 0;
-    // padding-right: 4px;
 }
 #root > div.NavBar > div.search .react-select__option--is-focused{
     background-color:
@@ -165,7 +200,6 @@ $theme-green-hover: #3dd3b2;
     background-color: $theme-green;
 }
 #root > div.NavBar > div.search > div > div > div{
-    // height: 28px;
     min-height: 28px;
     border-bottom-left-radius: 14px;
     border-top-left-radius: 14px;
@@ -179,9 +213,7 @@ $theme-green-hover: #3dd3b2;
     border-bottom-left-radius: 14px;
     border-top-left-radius: 14px;
 }
-#root > div.NavBar > div.search > div > div > div > div.react-select__indicators{
-    
-}
+
 #root > div.NavBar > div.search > div > div > div > div.react-select__indicators{
     height: 25px;
     border-bottom-left-radius: 14px;
@@ -193,99 +225,19 @@ $theme-green-hover: #3dd3b2;
     border-top-left-radius: 14px;
 }
 #root > div.NavBar > div.search > div > div > div > div.react-select__indicators > div{
-    // height: 30px;
     padding: 0;
     color: rgb(255, 255, 255);
 }
-
 #root > div.NavBar > div.search > div > div > div > div.react-select__indicators > span{
     display: none;
 }
 #root > div.NavBar > div.search > div > div > div > div.react-select__value-container.react-select__value-container--has-value{
     display: flex;
     justify-content: center;
-    // position: relative;
-    // div{
-    //     position: absolute;
-    //     left: 44px;
-    // }
 }
-// #root > div.NavBar > div.search > div > div{
-//     display: flex;
-// }
-
-// #root > div.NavBar > div.search > div > div > div{
-//     width: 100px;
-// }
-
 #root > div.NavBar > div.search > div > div > div > div.react-select__value-container.react-select__value-container--has-value{
     position: static
 }
-
-// .select2-dropdown.select2-dropdown--below{
-//     background-color: $theme-green;
-//     &:hover{
-//         background-color: $theme-green-hover;
-//     }
-// }
-
-// body > span > span > span.select2-results{
-//     border: none;
-// }
-
-// .select2-dropdown{
-//     border: 1px solid lightgray;
-// }
-
-// #select2-category-select-results li{
-//     background-color: $theme-green;
-//     font-weight: 600;
-//     border-top: 1px solid $theme-green-hover;
-//     &:hover{
-//         background-color: $theme-green-hover;
-//     }
-// }
-
-// body > span > span > span.select2-search.select2-search--dropdown{
-//     display: none;
-// }
-
-// #select2-category-select-container{
-//     color: white;
-
-// }
-
-
-
-// .select2-container--default .select2-selection--single{
-//     border: 1px solid $theme-green;
-//     border-radius: 14px;
-//     border-top-right-radius: 0px;
-//     border-bottom-right-radius: 0px;
-//     font-size: 1.2em;  
-//     position: relative;
-//     background-color: $theme-green;
-//     color: white;
-//     &:hover{
-//         background-color: $theme-green-hover;
-//         border-color: $theme-green-hover;
-//         .select2-selection__arrow{
-//             background-color: $theme-green-hover;
-//         }
-//     }
-// }
-
-// .select2-container--default .select2-selection--single .select2-selection__arrow {
-//     background-color: $theme-green;
-//     color: $theme-green;
-//     font-size: 1.3em;
-//     position: absolute;
-//     top: 0px;
-//     right: 0px;
-//     &:hover{
-//         background-color: $theme-green-hover;
-//     }
-// }
 
 @media (max-width: 500px){
     .login-nav-btn{
