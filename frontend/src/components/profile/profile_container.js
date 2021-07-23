@@ -9,7 +9,6 @@ const mSTP = (state, ownProps) => {
     return{
         posts: Object.values(state.entities.posts),
         // currentUser: state.session.user.id, 
-        username: state.session.user.username,
         userId: ownProps.match.params.userId
     }
 }
