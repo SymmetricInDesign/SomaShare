@@ -12,22 +12,22 @@ class Profile extends React.Component {
 
     componentDidMount(){
         this.props.fetchPostsForUser(this.props.userId)
+        this.props.fetchCommentsForUser(this.props.userId)
         UserUtil.fetchUser(this.props.userId).then(res=>{
             this.setState({user: res.data.username})
         });
     }
 
     render(){
-        const {userId, posts} = this.props
+        const {userId, posts, comments} = this.props
         
         if (this.props.posts && this.props.posts.length > 0){
-            // const {posts} = this.props
             return(
                 
                 <div className='body-container'>
                 <div className='post-body-container'>
                     <div className='post-headline-1'>
-                        <div className="profile-name">{this.state.user}'s posts</div>
+                        <div className="profile-name">{this.state.user}'s Posts</div>
                         <ul className='posts-index'>
                         {
                             
@@ -42,6 +42,9 @@ class Profile extends React.Component {
                             
                         }
                         </ul>
+                        <ul className="comments-index">
+
+                        </ul>
 
                     </div>
                     </div>
@@ -49,14 +52,14 @@ class Profile extends React.Component {
             )}else{
                 return(
                     <div className='body-container'>
-                    <div className='post-body-container'>
-                        <div className='post-headline-1'>
-                    <div className="profile-name">{this.props.username}
-                        <div className="no-post">No Posts</div>
-                    </div>
+                        <div className='post-body-container'>
+                            <div className='post-headline-1'>
+                                <div className="profile-name">{this.state.user}'s Posts
+                                    <div className="no-post">No Posts</div>
+                                </div>
 
-                    </div>
-                    </div>
+                            </div>
+                        </div>
                     </div>
                 )
            
@@ -65,11 +68,3 @@ class Profile extends React.Component {
     }
 }
 export default Profile;
-
-    // async getUser(userId){
-    //     // debugger
-    //     const res = await UserUtil.fetchUser(this.props.userId);
-    //     console.log(res);
-    //     console.log(res.data.username)
-    //     return res.data.username;
-    // }

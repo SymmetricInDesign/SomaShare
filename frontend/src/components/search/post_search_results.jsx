@@ -5,7 +5,6 @@ const queryString = require('query-string')
 class PostSearch extends React.Component{
     componentDidMount(){
         const searchFilter = queryString.parse(this.props.location.search)
-        console.log(searchFilter)
         this.props.requestPosts(searchFilter.category, searchFilter.searchText)
     }
 
@@ -15,10 +14,7 @@ class PostSearch extends React.Component{
           this.props.requestPosts(searchFilter.category, searchFilter.searchText)
         }
     }
-    
-    //   componentWillReceiveProps(newState) {
-    //     this.setState({ posts: newState.posts });
-    //   }
+ 
         render() {
             const {posts} = this.props
           return (

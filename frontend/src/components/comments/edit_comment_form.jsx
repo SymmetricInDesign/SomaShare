@@ -11,7 +11,6 @@ class EditCommentForm extends React.Component{
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.updateBody = this.updateBody.bind(this)
-        console.log(props)
     }
 
     handleSubmit(e){
@@ -21,7 +20,6 @@ class EditCommentForm extends React.Component{
     }
 
     updateBody(e){
-        console.log(this.state)
         this.setState({commentBody: e.target.value})
     }
 
@@ -31,8 +29,8 @@ class EditCommentForm extends React.Component{
         return(
             <div className="comment-index-item">
                 <form className='comment-form-container' onSubmit={this.handleSubmit}>
-                    <div className='comment-textarea'><textarea value={this.state.commentBody} onChange={this.updateBody}/></div>
-                    <input className='comment-submit-btn comment-edit-submit-btn' type='submit' />
+                    <div className='comment-textarea'><textarea value={this.state.commentBody} onChange={this.updateBody} maxLength="600"/></div>
+                    <input className='comment-submit-btn' type='submit' />
                 </form>
             </div>
         )

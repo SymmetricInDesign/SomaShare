@@ -17,7 +17,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
     fetchPost: (postId) => dispatch(fetchPost(postId)),
     deletePost: (postId) => dispatch(deletePost(postId))
-
+    
 })
 
 export default withRouter(connect(mSTP, mDTP)(PostShow))

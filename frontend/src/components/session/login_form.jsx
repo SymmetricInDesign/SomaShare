@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter} from 'react-router-dom'
-// import './form.css'
 
 
 class LoginForm extends React.Component {
@@ -20,6 +19,10 @@ class LoginForm extends React.Component {
         return e => this.setState({
           [field]: e.currentTarget.value
         });
+    }
+
+    componentWillUnmount(){
+      this.props.clearErrors()
     }
 
     handleSubmit(e) {

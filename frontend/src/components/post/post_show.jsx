@@ -59,7 +59,6 @@ class PostShow extends React.Component{
                          <p className='post-time'>Last updated: {post.updatedAt.slice(0,10)}</p>
                         
                          <p className='post-author'>Posted By: <Link className='post-show-user' to={`/users/${postAutherId}`}>{post.username}</Link></p>
-                         {console.log(postAutherId)}
                          <p className='post-category'>Category: {post.category}</p>
                     
                     </div>

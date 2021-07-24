@@ -6,7 +6,6 @@ import {withRouter} from "react-router";
 
 const mSTP = (state, ownProps) => {
     const post = state.entities.posts[ownProps.match.params.postId]
-    console.log(post)
     return {
         post,
         formType: 'Update Post',

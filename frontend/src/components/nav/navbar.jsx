@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Search from './search'
 
 
 class NavBar extends React.Component {
@@ -37,10 +38,7 @@ class NavBar extends React.Component {
         return (
           <div className="NavBar">
               <Link className="title-nav"to={'/'}>SomaShare</Link>
-              {/* <div className="nav-filler"> */}
-                {/* <Search/> */}
-
-              {/* </div> */}
+              <Search/> 
               <div>{ this.getLinks() }</div>
           </div>
         );

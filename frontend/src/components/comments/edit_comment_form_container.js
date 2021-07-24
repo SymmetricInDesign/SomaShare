@@ -7,7 +7,7 @@ const mSTP = (state, ownProps) => {
     return{
         comment: ownProps.comment,
         postId: ownProps.postId,
-        stopEditing: ownProps.stopEditing
+        stopEditing: ownProps.stopEditing,
     }
 }
 
