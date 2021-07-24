@@ -12,13 +12,14 @@ class Profile extends React.Component {
 
     componentDidMount(){
         this.props.fetchPostsForUser(this.props.userId)
+        this.props.fetchCommentsForUser(this.props.userId)
         UserUtil.fetchUser(this.props.userId).then(res=>{
             this.setState({user: res.data.username})
         });
     }
 
     render(){
-        const {userId, posts} = this.props
+        const {userId, posts, comments} = this.props
         
         if (this.props.posts && this.props.posts.length > 0){
             return(
@@ -40,6 +41,9 @@ class Profile extends React.Component {
                             ))
                             
                         }
+                        </ul>
+                        <ul className="comments-index">
+
                         </ul>
 
                     </div>

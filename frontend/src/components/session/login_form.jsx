@@ -21,6 +21,10 @@ class LoginForm extends React.Component {
         });
     }
 
+    componentWillUnmount(){
+      this.props.clearErrors()
+    }
+
     handleSubmit(e) {
         e.preventDefault();
     

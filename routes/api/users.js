@@ -27,7 +27,7 @@ router.get("/:user_id/posts", (req, res) => {
 })
 
 router.get("/:user_id/comments", (req, res) => {
-  Post.find({user: req.params.user_id})
+  Comment.find({user: req.params.user_id})
     .sort({date: 1})
     .then(comments => res.json(comments))
     .catch(err => 

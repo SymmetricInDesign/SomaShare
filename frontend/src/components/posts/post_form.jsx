@@ -5,7 +5,6 @@ class PostForm extends React.Component{
     constructor(props){
         super(props)
         this.state = props.post ? props.post : {};
-        this.state.category = CATEGORIES[0]
         this.state.username = props.username
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this)
@@ -67,7 +66,7 @@ class PostForm extends React.Component{
                                     className="post-input"/>
                                 </label>
                                 <label className="post-label">Category
-                                <select name="subject" className="subject" onChange={this.update('category')}>
+                                <select name="subject" value={this.state.category} className="subject" onChange={this.update('category')}>
                                     {categoryOptions}
                                 </select>
                                 </label>
