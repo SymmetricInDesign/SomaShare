@@ -9,6 +9,12 @@ const UserSchema = new Schema({
     password: {
       type: String,
       required: true
+    },
+    likedPostIds: {
+      type: [String]
+    },
+    dislikedPostIds: {
+      type: [String]
     }
   }, {
     timestamps: true

@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const Post = require('../../models/Post');
+
 const validatePostInput = require('../../validation/posts');
 
 //index
@@ -22,6 +23,7 @@ router.get("/", (req,res)=> {
         .sort({ date: -1 })
         .then( posts => res.json(posts))
         .catch(err => res.status(404).json({nopostsfound: 'No Posts Found'}))
+
     }else if (category != "All" && searchText == "-1"){
         Post.find().where({category: category})
         .sort({ date: -1 })
