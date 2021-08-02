@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';  
 import PostIndexItem from './post_index_item'
-
+// import Footer from '../footer/footer'
 
 class PostIndex extends React.Component {
 
@@ -47,6 +47,7 @@ render() {
             </div>   
         
         </div>
+        {/* <Footer /> */}
     </div>
     )
   }
