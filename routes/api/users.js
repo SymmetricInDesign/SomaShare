@@ -12,8 +12,11 @@ router.get('/current', passport.authenticate('jwt', {session: false}), (req, res
     res.json({
       id: req.user.id,
       username: req.user.username,
+      likedPostIds: req.user.likedPostIds,
+      dislikedPostIds: req.user.dislikedPostIds,
     });
   })
+
 
 router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
 
@@ -67,7 +70,7 @@ router.post("/register", (req, res) => {
             newUser
               .save()
               .then(user => {
-                const payload = { id: user.id, username: user.username };
+                const payload = { id: user.id, username: user.username, likedPostIds: user.likedPostIds, dislikedPostIds: user.dislikedPostIds };
   
                 jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
                   res.json({
@@ -101,7 +104,7 @@ router.post("/register", (req, res) => {
   
       bcrypt.compare(password, user.password).then(isMatch => {
         if (isMatch) {
-          const payload = { id: user.id, username: user.username };
+          const payload = { id: user.id, username: user.username, likedPostIds: user.likedPostIds, dislikedPostIds: user.dislikedPostIds };
   
           jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
             res.json({

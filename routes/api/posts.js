@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const Post = require('../../models/Post');
+
 const validatePostInput = require('../../validation/posts');
 
 //index
@@ -22,6 +23,7 @@ router.get("/", (req,res)=> {
         .sort({ date: -1 })
         .then( posts => res.json(posts))
         .catch(err => res.status(404).json({nopostsfound: 'No Posts Found'}))
+
     }else if (category != "All" && searchText == "-1"){
         Post.find().where({category: category})
         .sort({ date: -1 })
@@ -81,12 +83,17 @@ router.patch("/:id",
             return res.status(400).json(errors);
         }
         const body = req.body
-        const {title, category, description, link} = body
+        const {title, category, description, link, modifier} = body
+        console.log(modifier)
         Post.findById(req.params.id).then(post=>{
-            post.title = title
-            post.category = category
-            post.description = description
-            post.link = link
+            if (modifier === undefined){
+                post.title = title
+                post.category = category
+                post.description = description
+                post.link = link
+            }else{
+                post.rating += modifier
+            }
     
             post.save()
             res.json(post)
