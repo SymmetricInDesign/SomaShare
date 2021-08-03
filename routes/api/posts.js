@@ -83,12 +83,17 @@ router.patch("/:id",
             return res.status(400).json(errors);
         }
         const body = req.body
-        const {title, category, description, link} = body
+        const {title, category, description, link, modifier} = body
+        console.log(modifier)
         Post.findById(req.params.id).then(post=>{
-            post.title = title
-            post.category = category
-            post.description = description
-            post.link = link
+            if (modifier === undefined){
+                post.title = title
+                post.category = category
+                post.description = description
+                post.link = link
+            }else{
+                post.rating += modifier
+            }
     
             post.save()
             res.json(post)

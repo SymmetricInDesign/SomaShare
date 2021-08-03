@@ -46,7 +46,9 @@ export const createPost = (post)=>dispatch=>(
 export const updatePost = post => dispatch => (
     ApiUtil.updatePost(post).then(res=>dispatch(receivePost(res.data)))
 )
-
+export const updatePostLikes = (postId, modifier) => dispatch => (
+    ApiUtil.updatePostLikes(postId, modifier).then(res=>dispatch(receivePost(res.data)))
+) 
 export const deletePost = (postId) => dispatch=>(
     ApiUtil.deletePost(postId).then(res=>dispatch(removePost(res.data._id)))
 )
