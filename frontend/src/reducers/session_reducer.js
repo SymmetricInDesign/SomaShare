@@ -11,16 +11,14 @@ const initialState = {
 export default function(state = initialState, action) {
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
+            let newState = Object.assign({}, state)
             return {
-              ...state,
+              ...newState,
               isAuthenticated: !!action.currentUser,
               user: action.currentUser
             };
         case RECEIVE_USER_LOGOUT:
-            return {
-              isAuthenticated: false,
-              user: undefined
-            };
+            return initialState
         case RECEIVE_USER_SIGN_IN:
             return {
               ...state,

@@ -121,6 +121,12 @@ form.form-form label{
 
 }
 
+@media (max-width: 1200px){
+    .post-show-container{
+        margin-right: 5px;
+    }   
+}
+
 #post-rating-container{
     display: flex;
     flex-wrap: wrap;
@@ -128,9 +134,9 @@ form.form-form label{
     font-size: 27px;
     width: 100px;
     height: 40px;
-    top: 25%;
+    top: 0px;
     position: absolute;
-    left: -110px;
+    left: -115px;
     color: $theme-green;
     i{
         cursor: pointer;

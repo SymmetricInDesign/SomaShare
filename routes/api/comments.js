@@ -26,7 +26,7 @@ router.post("/",
         // if (!isValid) {
         //     return res.status(400).json(errors);
         // }
-        const user = req.user.id
+        const user = req.user._id
         const body = req.body
         const {commentBody, username, postId} = body
         const newComment = new Comment({user, commentBody, username, postId})

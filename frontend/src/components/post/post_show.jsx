@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CommentFormContainer from '../comments/comment_form_container';
 import CommentIndexContainer from '../comments/comment_index_container';
+import PostRating from './post-rating';
 
 
 class PostShow extends React.Component{
@@ -29,7 +30,7 @@ class PostShow extends React.Component{
     }
 
     render(){     
-        const {post, currentUserId, deletePost, currentUser} = this.props
+        const {post, currentUserId, currentUser} = this.props
         if(!post){
             return null;
         }    
@@ -41,20 +42,16 @@ class PostShow extends React.Component{
             <div className='post-show-complete-container'>
                 <div className='post-show-container'>
                     <div className='post-show'>
-                        <div id="post-rating-container">
-                            <p>Rating</p>
-                            {currentUser.likedPostIds.includes(post.id) ? 
-                                <i class="fas fa-thumbs-up"></i>
-                                :
-                                <i class="far fa-thumbs-up"></i>
-                            }
-                            <p>{post.rating}</p>
-                            {currentUser.dislikedPostIds.includes(post.id) ? 
-                                <i class="fas fa-thumbs-down"></i>
-                                :
-                                <i class="far fa-thumbs-down"></i>
-                            }
-                        </div>
+                        {currentUser ? 
+                            <PostRating currentUser = {currentUser} 
+                            post = {post} 
+                            updatePostLikes={this.props.updatePostLikes} 
+                            updateUserLikes={this.props.updateUserLikes}
+                            requestUser={this.props.requestUser}
+                            />
+                        :
+                            null
+                        }
                         <div className='post-show-1'>
                             <a href={post.link} target="/">{post.title}</a>
                             <div className='post-show-btns' id={show_flag}>

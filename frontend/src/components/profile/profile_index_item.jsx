@@ -41,7 +41,7 @@ class PostIndexItem extends React.Component{
     }  
 
     render(){
-        const {post, currentUserId, deletePost} = this.props
+        const {post, currentUserId} = this.props
         if(!post){
            return null;
        }

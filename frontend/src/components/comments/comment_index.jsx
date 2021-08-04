@@ -1,5 +1,4 @@
 import React from 'react';
-import { fetchCommentsForPost } from '../../actions/comment_actions';
 import CommentIndexItem from './comment_index_item'
 
 class CommentIndex extends React.Component{

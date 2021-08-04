@@ -5,6 +5,7 @@ class PostForm extends React.Component{
     constructor(props){
         super(props)
         this.state = props.post ? props.post : {};
+        this.state.category = CATEGORIES[0]
         this.state.username = props.username
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this)
@@ -12,7 +13,7 @@ class PostForm extends React.Component{
     componentDidMount(){
         if (this.props.formType === "Update Post")  this.props.fetchPost(this.props.match.params.postId)
     }
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (this.props.formType === 'Create Post'){
             if (nextProps.errors.length < 1) {
               this.props.history.push('/');

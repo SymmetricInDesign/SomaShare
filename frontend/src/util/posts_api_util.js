@@ -25,5 +25,5 @@ export const deletePost = (postId) => {
 }
 
 export const updatePostLikes = (postId, modifier) => {
-    return axios.patch(`/api/posts/${postId}`, modifier)
+    return axios.patch(`/api/posts/${postId}`, {modifier})
 }

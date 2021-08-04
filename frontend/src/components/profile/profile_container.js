@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import Profile from './profile.jsx';
-import { fetchPostsForUser, fetchPost, deletePost } from '../../actions/post_actions';
+import { fetchPostsForUser, deletePost } from '../../actions/post_actions';
 import { fetchCommentsForUser } from '../../actions/comment_actions';
 import{withRouter} from 'react-router'
 

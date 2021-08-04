@@ -10,7 +10,7 @@ const validateLoginInput = require('../../validation/login');
 
 router.get('/current', passport.authenticate('jwt', {session: false}), (req, res) => {
     res.json({
-      id: req.user.id,
+      id: req.user._id,
       username: req.user.username,
       likedPostIds: req.user.likedPostIds,
       dislikedPostIds: req.user.dislikedPostIds,
@@ -46,6 +46,42 @@ router.get("/:user_id", (req, res) => {
   )
 })
 
+router.patch("/:id",
+  // passport.authenticate('jwt', { session: false}),
+  (req, res) =>{
+    const body = req.body
+    const {postId, modifier} = body
+    User.findById(req.params.id).then(user=>{
+      if (modifier === 1){
+        let indexToRemove = user.dislikedPostIds.indexOf(postId)
+        if (indexToRemove > -1) {
+          user.dislikedPostIds.splice(indexToRemove, 1);
+        }
+        user.likedPostIds.push(postId)
+      }else if (modifier===-1){
+        let indexToRemove = user.likedPostIds.indexOf(postId)
+        if (indexToRemove > -1) {
+          user.likedPostIds.splice(indexToRemove, 1);
+        }
+        user.dislikedPostIds.push(postId)
+      }else{
+        let indexToRemove = user.likedPostIds.indexOf(postId)
+        if (indexToRemove > -1) {
+          user.likedPostIds.splice(indexToRemove, 1);
+        }else{
+          indexToRemove = user.dislikedPostIds.indexOf(postId)
+          if (indexToRemove>-1){
+            user.dislikedPostIds.splice(indexToRemove, 1)
+          }
+        }
+      }
+      // user.dislikedPostIds = []
+      // user.likedPostIds = []
+      user.save()
+      res.json(user)
+    }).catch(err=>res.status(404).json({error: err}))
+})
+
 router.post("/register", (req, res) => {
     const { errors, isValid } = validateRegisterInput(req.body);
   
@@ -70,7 +106,8 @@ router.post("/register", (req, res) => {
             newUser
               .save()
               .then(user => {
-                const payload = { id: user.id, username: user.username, likedPostIds: user.likedPostIds, dislikedPostIds: user.dislikedPostIds };
+                const payload = { _id: user._id, username: user.username, likedPostIds: user.likedPostIds, dislikedPostIds: user.dislikedPostIds };
+                
   
                 jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
                   res.json({
@@ -88,7 +125,7 @@ router.post("/register", (req, res) => {
 
   router.post("/login", (req, res) => {
     const { errors, isValid } = validateLoginInput(req.body);
-  
+    console.log(req.body)
     if (!isValid) {
       return res.status(400).json(errors);
     }
@@ -104,8 +141,8 @@ router.post("/register", (req, res) => {
   
       bcrypt.compare(password, user.password).then(isMatch => {
         if (isMatch) {
-          const payload = { id: user.id, username: user.username, likedPostIds: user.likedPostIds, dislikedPostIds: user.dislikedPostIds };
-  
+          const payload = { _id: user._id, username: user.username, likedPostIds: user.likedPostIds, dislikedPostIds: user.dislikedPostIds };
+          console.log(payload)
           jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
             res.json({
               success: true,
