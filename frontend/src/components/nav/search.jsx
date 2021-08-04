@@ -1,7 +1,6 @@
 import React from 'react'
 import {CATEGORIES} from '../../util/categories'
 import {Link} from "react-router-dom"
-import $ from 'jquery'
 import Select from 'react-select'
 
 const queryString = require('query-string')

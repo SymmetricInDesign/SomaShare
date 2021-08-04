@@ -42,7 +42,7 @@ class PostIndexItem extends React.Component{
     }  
 
     render(){
-        const {post, currentUserId, deletePost} = this.props
+        const {post, currentUserId} = this.props
 
         if(!post){
            return null;
@@ -50,7 +50,7 @@ class PostIndexItem extends React.Component{
 
        currentUserId === post.user ? this.showFlag=true : this.showFlag=false;
      
-       const show_flag = this.showFlag ? 'show' : 'not-show';
+    //    const show_flag = this.showFlag ? 'show' : 'not-show';
         return(
         <li>
             <div className="post-details">

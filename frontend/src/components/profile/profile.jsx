@@ -1,6 +1,5 @@
 import React from 'react';
 import PostIndexItem from './profile_index_item';
-import {Link} from 'react-router-dom';
 import * as UserUtil from '../../util/user_api_util'
 
 class Profile extends React.Component {
@@ -19,7 +18,7 @@ class Profile extends React.Component {
     }
 
     render(){
-        const {userId, posts, comments} = this.props
+        const {posts} = this.props
         
         if (this.props.posts && this.props.posts.length > 0){
             return(

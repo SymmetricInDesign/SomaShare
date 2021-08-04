@@ -59,12 +59,14 @@ router.get("/:id", (req, res) => {
 router.post("/", 
     passport.authenticate('jwt', { session: false}),
     (req, res) => {
+        // console.log(req.body)
         const {errors, isValid} = validatePostInput(req.body)
 
         if (!isValid) {
             return res.status(400).json(errors);
         }
-        const user = req.user.id
+        // console.log(req.user)
+        const user = req.user._id
         const body = req.body
         const {title, category, description, link, username} = body
         const newPost = new Post({user, title, category, description, link, username})
@@ -77,14 +79,15 @@ router.post("/",
 router.patch("/:id", 
     passport.authenticate('jwt', { session: false}),
     (req, res) => {
-        const {errors, isValid} = validatePostInput(req.body)
-
-        if (!isValid) {
-            return res.status(400).json(errors);
-        }
         const body = req.body
         const {title, category, description, link, modifier} = body
-        console.log(modifier)
+        if (title){
+            const {errors, isValid} = validatePostInput(req.body)
+
+            if (!isValid) {
+                return res.status(400).json(errors);
+            }
+        }
         Post.findById(req.params.id).then(post=>{
             if (modifier === undefined){
                 post.title = title

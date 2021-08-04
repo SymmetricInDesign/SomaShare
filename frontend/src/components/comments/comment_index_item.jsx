@@ -26,7 +26,7 @@ class CommentIndexItem extends React.Component{
                   </Link>
                   <div className='comment-body'>{comment.commentBody}</div>
               </div>
-              {comment.user == this.props.currentUserId ? 
+              {comment.user === this.props.currentUserId ? 
                 <div className="comment-buttons-container">
                         <div className="form-button edit-button comment-submit-btn" onClick={()=>this.setState({editing: true})}>Edit</div>
                         <div className="form-button edit-button comment-submit-btn" onClick={()=>this.props.deleteComment(comment._id)}>Delete</div>

@@ -19,7 +19,7 @@ class NavBar extends React.Component {
             
               <div className="session-btn-nav">
                   
-                  <Link className="user-profile-btn" to={`/users/${this.props.user.id}`}>Hello {this.props.username}!</Link>
+                  <Link className="user-profile-btn" to={`/users/${this.props.user._id}`}>Hello {this.props.username}!</Link>
                   <div className="login-nav-btn" onClick={this.logoutUser}>Logout</div>
                  
               </div>
