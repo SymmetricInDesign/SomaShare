@@ -9,13 +9,13 @@ Somashare is an Redditlike interactive education website where users are able to
 
 ## Technologies Used
 
-- MondoDB
+- MongoDB
 - Express
 - React/Redux
 
 ## Link to Live Site
+[SomaShare](https://somashare.herokuapp.com/#/)
 
-https://somashare.herokuapp.com/#/
 
 ## Features
 
