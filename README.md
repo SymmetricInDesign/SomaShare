@@ -23,6 +23,8 @@ https://somashare.herokuapp.com/#/
 
 Users are able to login via username and password and errors are rendered if password or username are invalid. New users can also sign up to create a new account.
 
+![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/Screen%20Shot%202021-08-04%20at%207.51.25%20PM.png)
+
 ### User Profile
 
 A user's profile page contains all their posts.
