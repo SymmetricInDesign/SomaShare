@@ -47,21 +47,21 @@ Users can comment on other user's posts and rate the post.
 ### The SomaShare Team
 
 Donnie Wombaugh
-[I'm an inline-style link](https://www.google.com)
-Angelist
-Github
+[Linkedin](https://www.linkedin.com/in/donnie-wombough-911671218/)
+[Github](https://github.com/SymmetricInDesign)
+[AngelList](https://www.google.com)
 
 Wen Lui
-Linkedin
-Angelist
-Github
+[Linkedin](https://www.linkedin.com/in/wliu0709/)
+[Github](https://github.com/robokitten007)
+[AngelList](https://angel.co/u/wen-liu-4)
 
 Priyesh Shah
-Linkedin
-Angelist
-Github
+[Linkedin](https://www.linkedin.com/in/priyesh-shah-bb612688/)
+[Github](https://github.com/priyeshshah147)
+[AngelList](https://angel.co/u/priyesh-shah-3)
 
 Yung Cai
-Linkedin
-Angelist
-Github
+[Linkedin](https://www.linkedin.com/in/yung-cai-8b8744218/)
+[Github](https://github.com/yungcai)
+[AngelList](https://angel.co/u/yung-cai)
