@@ -47,7 +47,7 @@ Users can comment on other user's posts and rate the post.
 ### The SomaShare Team
 
 Donnie Wombaugh
-Linkedin
+[I'm an inline-style link](https://www.google.com)
 Angelist
 Github
 
