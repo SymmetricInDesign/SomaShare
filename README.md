@@ -14,3 +14,5 @@ Somashare is an Redditlike interactive education website where users are able to
 
 https://somashare.herokuapp.com/#/
 
+### Features
+
