@@ -29,9 +29,13 @@ Users are able to login via username and password and errors are rendered if pas
 
 A user's profile page contains all their posts.
 
+![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/Screen%20Shot%202021-08-05%20at%205.32.04%20PM.png)
+
 ### Post Search 
 
 SearchBar searches posts based on category or user input.
+
+![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/Screen%20Shot%202021-08-05%20at%205.30.36%20PM.png)
 
 ### Comments 
 
