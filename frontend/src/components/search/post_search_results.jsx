@@ -6,11 +6,11 @@ import {Link} from 'react-router-dom';
 const queryString = require('query-string')
 
 class PostSearch extends React.Component{
-    // constructor(props){
-    //     super(props)
-    //     this.state = {activeButton: "newest"}
-    //     this.postsSortedByDate = [] 
-    // }
+    constructor(props){
+        super(props)
+        this.state = {activeButton: "newest"}
+        this.postsSortedByDate = [] 
+    }
 
     componentDidMount(){
         const searchFilter = queryString.parse(this.props.location.search)
@@ -41,20 +41,21 @@ class PostSearch extends React.Component{
  
     render() {
         let {posts} = this.props     
-        // if (!(this.postsSortedByDate.length > 0) && posts.length>0){
-        //     this.postsSortedByDate=[]
-        //     posts.forEach(post=>{
-        //         this.postsSortedByDate.push(post)
-        //     })
-        // }
-        
-        // if (this.state.activeButton === "best"){
-        //     posts.sort(this.ratingComparator)
-        // }
-        
-        // if (this.state.activeButton === "newest" && this.postsSortedByDate.length > 0){
-        //     posts = this.postsSortedByDate
-        // }
+        if (this.postsSortedByDate.length !== posts.length){
+            this.postsSortedByDate = []
+            posts.forEach(post=>{
+              this.postsSortedByDate.push(post)
+            })
+            console.log(this.postsSortedByDate)
+          }
+          
+          if (this.state.activeButton === "best"){
+            posts.sort(this.ratingComparator)
+          }
+      
+          if (this.state.activeButton === "newest" && this.postsSortedByDate.length > 0){
+            posts = this.postsSortedByDate
+          }
 
         return (
             <div className='body-container'>
@@ -67,10 +68,7 @@ class PostSearch extends React.Component{
                         </div> 
                     <div className='post-headline-1'>
                     <div className="create-post-index">
-                        <div className="sort-button-container">
-                            <div className="sort-button">Newest</div>
-                        </div>
-                    {/* <div className="sort-button-container">
+                    <div className="sort-button-container">
                       {this.state.activeButton === "newest" ? 
                         <div className="sort-button-active" onClick={() => this.setActive("newest")}>Newest</div>
                       :
@@ -81,7 +79,7 @@ class PostSearch extends React.Component{
                       :
                         <div className="sort-button" onClick={() => this.setActive("best")}>Best</div>
                       }
-                    </div> */}
+                    </div>
                     <Link className="login-nav-btn" to={'/posts/new'}>Create Post</Link>
                   </div>
                         {posts ? 

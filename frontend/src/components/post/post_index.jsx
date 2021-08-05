@@ -33,10 +33,12 @@ class PostIndex extends React.Component {
   render() {
     let {posts} = this.props
 
-    if (!(this.postsSortedByDate.length > 0) && posts.length>0){
+    if (this.postsSortedByDate.length !== posts.length){
+      this.postsSortedByDate = []
       posts.forEach(post=>{
         this.postsSortedByDate.push(post)
       })
+      console.log(this.postsSortedByDate)
     }
     
     if (this.state.activeButton === "best"){
@@ -46,6 +48,8 @@ class PostIndex extends React.Component {
     if (this.state.activeButton === "newest" && this.postsSortedByDate.length > 0){
       posts = this.postsSortedByDate
     }
+
+    // console.log(posts)
 
     return (
       <div className='body-container'>
