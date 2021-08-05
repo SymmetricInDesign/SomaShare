@@ -125,7 +125,6 @@ router.post("/register", (req, res) => {
 
   router.post("/login", (req, res) => {
     const { errors, isValid } = validateLoginInput(req.body);
-    
     if (!isValid) {
       return res.status(400).json(errors);
     }
@@ -142,7 +141,6 @@ router.post("/register", (req, res) => {
       bcrypt.compare(password, user.password).then(isMatch => {
         if (isMatch) {
           const payload = { _id: user._id, username: user.username, likedPostIds: user.likedPostIds, dislikedPostIds: user.dislikedPostIds };
-          
           jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
             res.json({
               success: true,
