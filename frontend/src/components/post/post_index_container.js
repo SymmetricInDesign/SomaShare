@@ -5,6 +5,7 @@ import { fetchPosts } from "../../actions/post_actions"
 const mSTP = (state={}) => {
     let posts
     if (state.entities.posts) posts = Object.values(state.entities.posts)
+    // console.log(posts)
     return {
         posts,
         currentUserId: state.session.user ? state.session.user._id : undefined,
