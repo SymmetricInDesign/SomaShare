@@ -4,7 +4,6 @@
 
 Somashare is an Redditlike interactive education website where users are able to share external links with other users. It utilizes a MongoDB/Express backend with a React/Redux frontend. 
 
-![]
 
 ## Technologies Used
 
@@ -24,12 +23,34 @@ Users are able to login via username and password and errors are rendered if pas
 
 ### User Profile
 
-A user's profile page contains all their posts
+A user's profile page contains all their posts.
 
 ### Post Search 
 
-SearchBar searches posts based on category or user input
+SearchBar searches posts based on category or user input.
 
 ### Comments 
 
 Users can comment on other user's posts and rate the post.
+
+### The SomaShare Team
+
+Donnie Wombaugh
+Linkedin
+Angelist
+Github
+
+Wen Lui
+Linkedin
+Angelist
+Github
+
+Priyesh Shah
+Linkedin
+Angelist
+Github
+
+Yung Cai
+Linkedin
+Angelist
+Github
