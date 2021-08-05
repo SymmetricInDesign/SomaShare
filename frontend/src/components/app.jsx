@@ -12,10 +12,12 @@ import ProfileContainer from '../components/profile/profile_container'
 import { Switch, Route } from 'react-router-dom';
 import "../styles/styles.scss"
 import CommentFormContainer from './comments/comment_form_container';
+import Footer from './footer/footer'
 
 const App = () => (
     <>
         <Route path="/" component={NavBar} />
+        
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>
@@ -27,6 +29,7 @@ const App = () => (
             <Route exact path="/posts/:postId" component={PostShowContainer}/>
             <Route exact path="/" component={PostIndexContainer} />
         </Switch>
+        <Route path="/" component={Footer} />
     </>
 );
 
