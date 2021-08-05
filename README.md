@@ -4,7 +4,7 @@
 
 Somashare is an Redditlike interactive education website where users are able to share external links with other users. It utilizes a MongoDB/Express backend with a React/Redux frontend. 
 
-https://github.com/SymmetricInDesign/SomaShare/blob/main/Screen%20Shot%202021-08-04%20at%207.46.36%20PM.png
+![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/Screen%20Shot%202021-08-04%20at%207.46.36%20PM.png)
 
 
 ## Technologies Used
