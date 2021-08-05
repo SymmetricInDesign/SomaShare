@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {withRouter} from 'react-router';
-import Footer from '../footer/footer'
 
 class PostIndexItem extends React.Component{
 

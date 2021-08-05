@@ -6,7 +6,8 @@
     font-size: 16px;
     margin-left: 10%;
     margin-right: 10%;
-    // background-color:#F8F8F8;
+    background-color:#F8F8F8;
+    padding-bottom: 15px;
 }
 
 .footer-left{
@@ -16,7 +17,7 @@
 }
 
 .footer-left h1{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     background-color: #F8F8F8;
     margin-top: 10px;
@@ -25,7 +26,7 @@
 }
 .footer h2{
     font-family: Lato;
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 5px;
     margin-left: 5px;
     color: #a8a7a7;
@@ -80,7 +81,11 @@
     color: #1cc29f;
 }
 
-#root > div.footer > div.footer-right> h2:nth-child(1) > a:nth-child(3) > svg{
+#root > div.footer > div.footer-right> h2:nth-child(1) > a:nth-child(3) > svg, 
+#root > div.footer > div.footer-right > h2:nth-child(1) > a:nth-child(4) > svg, 
+#root > div.footer > div.footer-right > h2:nth-child(2) > a:nth-child(4) > svg,
+#root > div.footer > div.footer-left > h2:nth-child(2) > a:nth-child(4) > svg,
+#root > div.footer > div.footer-left > h2:nth-child(3) > a:nth-child(4) > svg{
     color: #1cc29f;
 }
 

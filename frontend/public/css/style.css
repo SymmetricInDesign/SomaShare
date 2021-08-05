@@ -3,6 +3,7 @@
     flex-direction: column;
     overflow: auto;
   background-color: #F8F8F8;
+  min-height: 100vh;
 
 }
 
