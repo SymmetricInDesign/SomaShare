@@ -1,6 +1,31 @@
 $theme-green: #1cc29f;
 $theme-green-hover: #3dd3b2;
 
+.sort-button-container{
+    display: flex;
+    flex-direction: row;
+    div{
+        // border: 1px solid lightgray;
+        border-radius: 2px;
+        padding: 6px;
+        margin-right: 7px;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(226, 226, 226);
+        }
+    }
+    .sort-button{
+        background-color: #F8F8F8;
+    }
+    .sort-button-active{
+        background-color: lightgray;
+    }
+}
+
+.post-index-rating{
+    color: $theme-green
+}
+
 .post-label{
     font-family: 'Montserrat', sans-serif;
     color: white;

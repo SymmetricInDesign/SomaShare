@@ -38,6 +38,7 @@ class PostShow extends React.Component{
         const show_flag = this.showFlag ? 'show' : 'not-show';
         const postAutherId = post.user
 
+
         return(
             <div className='post-show-complete-container'>
                 <div className='post-show-container'>

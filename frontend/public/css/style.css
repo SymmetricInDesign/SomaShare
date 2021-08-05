@@ -98,6 +98,12 @@
     margin-bottom: 10px;
 }
 
+/* .post-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
 .post-left > p {
     margin-left: 30px;
 }

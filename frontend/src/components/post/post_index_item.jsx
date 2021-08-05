@@ -57,6 +57,9 @@ class PostIndexItem extends React.Component{
                 <div className='post-index-item'>
                     <div className='post-left'>
                         {this.getDate()} 
+                        <div className='post-date'>
+                            <p className='post-index-rating'>{post.rating > 0 ? "+" : null}{post.rating}</p>
+                        </div>
                     </div>
                     <div className='post-right'>
                         <Link className='post-right-1'to={`/posts/${post._id}`}>{post.title}</Link>
