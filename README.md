@@ -23,26 +23,26 @@ https://somashare.herokuapp.com/#/
 
 Users are able to login via username and password and errors are rendered if password or username are invalid. New users can also sign up to create a new account.
 
-![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/Screen%20Shot%202021-08-04%20at%207.51.25%20PM.png)
+![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/frontend/public/images/Screen%20Shot%202021-08-04%20at%207.51.25%20PM.png)
 
 ### User Profile
 
 A user's profile page contains all their posts.
 
-![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/Screen%20Shot%202021-08-05%20at%205.32.04%20PM.png)
+![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/frontend/public/images/Screen%20Shot%202021-08-05%20at%205.32.04%20PM.png)
 
 ### Post Search 
 
 SearchBar searches posts based on category or user input.
 
-![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/Screen%20Shot%202021-08-05%20at%205.30.36%20PM.png)
+![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/frontend/public/images/Screen%20Shot%202021-08-05%20at%205.30.36%20PM.png)
 
 ### Comments 
 
 Users can comment on other user's posts and rate the post.
 
-![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/Screen%20Shot%202021-08-04%20at%208.36.36%20PM.png)
-![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/Screen%20Shot%202021-08-04%20at%208.36.41%20PM.png)
+![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/frontend/public/images/Screen%20Shot%202021-08-04%20at%208.36.36%20PM.png)
+![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/frontend/public/images/Screen%20Shot%202021-08-04%20at%208.36.41%20PM.png)
 
 ### The SomaShare Team
 
