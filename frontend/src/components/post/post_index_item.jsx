@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {withRouter} from 'react-router';
+import Footer from '../footer/footer'
 
 class PostIndexItem extends React.Component{
 
@@ -52,6 +53,7 @@ class PostIndexItem extends React.Component{
      
     //    const show_flag = this.showFlag ? 'show' : 'not-show';
         return(
+    
         <li>
             <div className="post-details">
                 <div className='post-index-item'>

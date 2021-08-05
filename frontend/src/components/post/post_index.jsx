@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';  
 import PostIndexItem from './post_index_item'
-
+// import Footer from '../footer/footer'
 
 class PostIndex extends React.Component {
   constructor(props){
@@ -59,8 +59,6 @@ class PostIndex extends React.Component {
                   {/* <img className='transit-icon' src="/images/index_2.jpeg" alt="books" /> */}
       
               </div> 
-
-        
               <div className='post-headline-1'>
                   <div className="create-post-index">
                     <div className="sort-button-container">
