@@ -37,6 +37,9 @@ SearchBar searches posts based on category or user input.
 
 Users can comment on other user's posts and rate the post.
 
+![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/Screen%20Shot%202021-08-04%20at%208.36.36%20PM.png)
+![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/Screen%20Shot%202021-08-04%20at%208.36.41%20PM.png)
+
 ### The SomaShare Team
 
 Donnie Wombaugh
