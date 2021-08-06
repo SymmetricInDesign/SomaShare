@@ -16,7 +16,6 @@ class PostIndex extends React.Component {
   } 
 
   setActive(str){
-    console.log(str)
     this.setState({activeButton: str})
   }
 
@@ -38,7 +37,6 @@ class PostIndex extends React.Component {
       posts.forEach(post=>{
         this.postsSortedByDate.push(post)
       })
-      console.log(this.postsSortedByDate)
     }
     
     if (this.state.activeButton === "best"){
@@ -49,7 +47,6 @@ class PostIndex extends React.Component {
       posts = this.postsSortedByDate
     }
 
-    // console.log(posts)
 
     return (
       <div className='body-container'>

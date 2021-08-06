@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LoginFormContainer from '../components/session/login_form_container'

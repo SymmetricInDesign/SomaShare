@@ -4,10 +4,14 @@
     justify-content: space-between;
     font-family: sans-serif;
     font-size: 16px;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
     background-color:#F8F8F8;
     padding-bottom: 15px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-left{
@@ -42,50 +46,66 @@
     margin-right: 15px;
 }
 
-#root > div.footer > div.footer-left > h2:nth-child(2) > a:nth-child(1) > svg{
+#root > div.footer > div.footer-left > h2:nth-child(2) > a:nth-child(1){
     color: #1cc29f;
 }
 
-#root > div.footer > div.footer-left > h2:nth-child(2) > a:nth-child(2) > svg{
+#root > div.footer > div.footer-left > h2:nth-child(2) > a:nth-child(2){
     color: #1cc29f;
 }
-#root > div.footer > div.footer-left > h2:nth-child(2) > a:nth-child(3) > svg{
+#root > div.footer > div.footer-left > h2:nth-child(2) > a:nth-child(3){
     color: #1cc29f;
 }
 
-#root > div.footer > div.footer-left > h2:nth-child(3) > a:nth-child(1) > svg{
+#root > div.footer > div.footer-left > h2:nth-child(3) > a:nth-child(1){
     color: #1cc29f;
 }
-#root > div.footer > div.footer-left > h2:nth-child(3) > a:nth-child(2) > svg{
+#root > div.footer > div.footer-left > h2:nth-child(3) > a:nth-child(2){
     color: #1cc29f;
     
 }
-#root > div.footer > div.footer-left > h2:nth-child(3) > a:nth-child(3) > svg{
+#root > div.footer > div.footer-left > h2:nth-child(3) > a:nth-child(3){
     color: #1cc29f;
 }
 
-#root > div.footer > div.footer-right > h2:nth-child(2) > a:nth-child(1) > svg{
+#root > div.footer > div.footer-right > h2:nth-child(2) > a:nth-child(1){
     color: #1cc29f;
 }
 
-#root > div.footer > div.footer-right > h2:nth-child(2) > a:nth-child(2) > svg{
+#root > div.footer > div.footer-right > h2:nth-child(2) > a:nth-child(2){
     color: #1cc29f;
 }
-#root > div.footer > div.footer-right > h2:nth-child(2) > a:nth-child(3) > svg{
+#root > div.footer > div.footer-right > h2:nth-child(2) > a:nth-child(3){
     color: #1cc29f;
 }
-#root > div.footer > div.footer-right > h2:nth-child(1) > a:nth-child(1) > svg{
+#root > div.footer > div.footer-right > h2:nth-child(1) > a:nth-child(1){
     color: #1cc29f;
 }
-#root > div.footer > div.footer-right > h2:nth-child(1) > a:nth-child(2) > svg{
-    color: #1cc29f;
-}
-
-#root > div.footer > div.footer-right> h2:nth-child(1) > a:nth-child(3) > svg, 
-#root > div.footer > div.footer-right > h2:nth-child(1) > a:nth-child(4) > svg, 
-#root > div.footer > div.footer-right > h2:nth-child(2) > a:nth-child(4) > svg,
-#root > div.footer > div.footer-left > h2:nth-child(2) > a:nth-child(4) > svg,
-#root > div.footer > div.footer-left > h2:nth-child(3) > a:nth-child(4) > svg{
+#root > div.footer > div.footer-right > h2:nth-child(1) > a:nth-child(2){
     color: #1cc29f;
 }
 
+#root > div.footer > div.footer-right> h2:nth-child(1) > a:nth-child(3), 
+#root > div.footer > div.footer-right > h2:nth-child(1) > a:nth-child(4), 
+#root > div.footer > div.footer-right > h2:nth-child(2) > a:nth-child(4),
+#root > div.footer > div.footer-left > h2:nth-child(2) > a:nth-child(4),
+#root > div.footer > div.footer-left > h2:nth-child(3) > a:nth-child(4) {
+    color: #1cc29f;
+}
+
+#root > div.footer > div.footer-left > h2:nth-child(3) > a{
+
+}
+
+div.footer svg i{
+    color: #1cc29f;
+}
+
+#root > div.footer > div.footer-right> h2:nth-child(1) > a{
+    color: #1cc29f;
+}
+
+#root > div.footer > div.footer-left > h2:nth-child(3) > a:nth-child(1){
+    color: #1cc29f;
+    text-decoration: none;
+}
