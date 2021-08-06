@@ -19,7 +19,7 @@ class NavBar extends React.Component {
             
               <div className="session-btn-nav">
                   
-                  <Link className="user-profile-btn" to={`/users/${this.props.user._id}`}>Hello {this.props.username}!</Link>
+                  <Link className="user-profile-btn" to={`/users/${this.props.user._id}`} replace>Hello {this.props.username}!</Link>
                   <div className="login-nav-btn" onClick={this.logoutUser}>Logout</div>
                  
               </div>
@@ -37,7 +37,7 @@ class NavBar extends React.Component {
     render() {
         return (
           <div className="NavBar">
-              <Link className="title-nav"to={'/'}>SomaShare</Link>
+              <Link className="title-nav"to={'/'} replace>SomaShare</Link>
               <Search/> 
               <div>{ this.getLinks() }</div>
           </div>

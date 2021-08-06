@@ -59,13 +59,11 @@ router.get("/:id", (req, res) => {
 router.post("/", 
     passport.authenticate('jwt', { session: false}),
     (req, res) => {
-        // console.log(req.body)
         const {errors, isValid} = validatePostInput(req.body)
 
         if (!isValid) {
             return res.status(400).json(errors);
         }
-        // console.log(req.user)
         const user = req.user._id
         const body = req.body
         const {title, category, description, link, username} = body

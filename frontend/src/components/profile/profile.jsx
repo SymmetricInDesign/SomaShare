@@ -17,6 +17,16 @@ class Profile extends React.Component {
         });
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.userId !== prevProps.userId) {
+            this.props.fetchPostsForUser(this.props.userId)
+            this.props.fetchCommentsForUser(this.props.userId)
+            UserUtil.fetchUser(this.props.userId).then(res=>{
+                this.setState({user: res.data.username})
+            });
+        }
+      }
+
     render(){
         const {posts} = this.props
         

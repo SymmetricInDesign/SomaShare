@@ -8,7 +8,7 @@ const mSTP = (state, ownProps) => {
     return{
         posts: Object.values(state.entities.posts),
         comments: Object.values(state.entities.comments),
-        userId: ownProps.match.params.userId
+        userId: ownProps.match.params.userId,
     }
 }
 

@@ -45,4 +45,11 @@ table {
 
 #root{
 	background-color: #F8F8F8;
+	min-height: 800px;
+	position: relative;
+}
+
+body{
+	min-height: 100vh;
+	background-color: #F8F8F8;
 }

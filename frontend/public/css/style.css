@@ -55,6 +55,7 @@
 
 .posts-index{
   margin-top: 10px;
+  padding-bottom: 100px;
   background-color: none;
   display:flex;
   flex-direction:column-reverse;
@@ -168,6 +169,7 @@
     height:33.3%;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
+    padding-bottom: 100px;
 }
 
 .post-show{
