@@ -46,7 +46,7 @@ Users can comment on other user's posts and rate the post.
 Donnie Wombaugh
 [Linkedin](https://www.linkedin.com/in/donnie-wombough-911671218/)
 [Github](https://github.com/SymmetricInDesign)
-[AngelList](https://www.google.com)
+[AngelList](https://angel.co/u/donnie-wombough)
 
 Wen Lui
 [Linkedin](https://www.linkedin.com/in/wliu0709/)
