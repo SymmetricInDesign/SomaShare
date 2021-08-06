@@ -5,7 +5,6 @@ import { fetchCommentsForUser } from '../../actions/comment_actions';
 import{withRouter} from 'react-router'
 
 const mSTP = (state, ownProps) => {
-    console.log(ownProps)
     return{
         posts: Object.values(state.entities.posts),
         comments: Object.values(state.entities.comments),
