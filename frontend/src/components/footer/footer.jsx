@@ -11,7 +11,7 @@ const Footer =()=>{
                 <a href="https://github.com/SymmetricInDesign" target='_blank' rel="noreferrer"><i className="fab fa-github-alt"></i></a>
                 <a href='https://www.linkedin.com/in/donnie-wombough-911671218/' target='_blank' rel="noreferrer"><i className='fab fa-linkedin-in' ></i></a>
                 <a href="https://angel.co/u/donnie-wombough" target='_blank' rel="noreferrer"><i className='fab fa-angellist' ></i></a>
-                <a href="#" target='_blank' rel="noreferrer"><i className='fas fa-user'></i></a>
+                <a href="http://dwombough.me" target='_blank' rel="noreferrer"><i className='fas fa-user'></i></a>
             </h2>
             <h2>Priyesh Shah: 
                 <a href="https://github.com/priyeshshah147" target='_blank' rel="noreferrer"> <i className="fab fa-github-alt"></i> </a>
