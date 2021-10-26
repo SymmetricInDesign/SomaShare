@@ -1,5 +1,5 @@
 import React from 'react'
-import PostIndexItem from '../post/post_index_item'
+import PostIndexItem from '../posts/post_index_item'
 import { withRouter } from 'react-router'
 import {Link} from 'react-router-dom';  
 
