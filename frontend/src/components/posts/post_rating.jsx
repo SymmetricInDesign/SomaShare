@@ -47,7 +47,9 @@ class PostRating extends React.Component{
         
         return (
             <div id="post-rating-container">
+                
                 <p>Rating</p>
+
                 {currentUser && currentUser.likedPostIds.includes(post._id) ? 
                     <i onClick={this.removeLike} className="fas fa-thumbs-up"></i>
                     :
