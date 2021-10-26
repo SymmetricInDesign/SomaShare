@@ -18,14 +18,17 @@ class CommentIndexItem extends React.Component{
     render(){
       const {comment} = this.props
       if (!this.state.editing){
+
           return(
-              <div className='comment-index-item'>
+            <div className='comment-index-item'>
+
               <div className="comment-content">
                   <Link to={`/users/${comment.user}`}>
                       <div className='comment-username'>{comment.username}</div>
                   </Link>
                   <div className='comment-body'>{comment.commentBody}</div>
               </div>
+
               {comment.user === this.props.currentUserId ? 
                 <div className="comment-buttons-container">
                         <div className="form-button edit-button comment-submit-btn" onClick={()=>this.setState({editing: true})}>Edit</div>
@@ -34,9 +37,12 @@ class CommentIndexItem extends React.Component{
               :
                 null
               }
+
               <div className='comment-date'>Last updated: {comment.updatedAt.slice(0, 10)}</div>
+
           </div>
-          )
+        )
+
       }else{
           return(
               <EditCommentFormContainer
@@ -47,7 +53,6 @@ class CommentIndexItem extends React.Component{
           )
       }
     }
-  
 }
 
 export default CommentIndexItem

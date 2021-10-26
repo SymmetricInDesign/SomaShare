@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {withRouter} from 'react-router';
+
 class PostIndexItem extends React.Component{
+
     constructor(props){
         super(props);
         this.showFlag = false;
         this.getDate= this.getDate.bind(this);
+
     }
 
     deletePostAndRedirect(){
@@ -15,6 +18,7 @@ class PostIndexItem extends React.Component{
 
     getDate() {
         const { post } = this.props
+
         const monthHead = {
             "01": "JAN",
             "02": "FEB",
@@ -29,9 +33,11 @@ class PostIndexItem extends React.Component{
             '11': "NOV",
             "12": "DEC"
         }
+
         let date = post.createdAt
         let month = date.slice(5, 7)
         let day = date.slice(8, 10)
+
         return (
             <div className='post-date'>
                 <p className='post-month'>{monthHead[month]}</p> <p className='post-day'>{day}</p>
@@ -41,32 +47,23 @@ class PostIndexItem extends React.Component{
 
     render(){
         const {post, currentUserId} = this.props
-
-        if (!post) return null
-
+        if (!post) return null;
         currentUserId === post.user ? this.showFlag=true : this.showFlag=false;
-     
-        const show_flag = this.showFlag ? 'show' : 'not-show';
-        
+
         return(
             <li>
                 <div className="post-details">
-                    <div className='profile-index-item'>
-
-                        <div className='profile-edit-delete-btn' id={show_flag}>
-                            <Link className='post-show-edit' to={`/posts/${post._id}/edit`}>Edit</Link>
-                            <div className='post-show-delete' onClick={() => { if (window.confirm('Are you sure you want to delete this post?')) this.deletePostAndRedirect() } }>Delete</div> 
-                        </div>
-
+                    <div className='post-index-item'>
                         <div className='post-left'>
                             {this.getDate()} 
+                            <div className='post-date'>
+                                <p className='post-index-rating'>{post.rating > 0 ? "+" : null}{post.rating}</p>
+                            </div>
                         </div>
-
-                        <div className='profile-post-cont'>
+                        <div className='post-right'>
                             <Link className='post-right-1'to={`/posts/${post._id}`}>{post.title}</Link>
-                            <p className='post-right-2'>{this.props.post.description}</p> 
-                        </div>
-                        
+                            <p className='post-right-2'>{this.props.post.description}</p>
+                        </div>   
                     </div>
                 </div>
             </li>

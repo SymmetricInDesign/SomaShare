@@ -13,8 +13,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
     return {
-        logout:() => dispatch(logout()),
-        login: () => dispatch(login()),
+        logout: () => dispatch(logout()),
+        login:  () => dispatch(login()),
     }
 }
 

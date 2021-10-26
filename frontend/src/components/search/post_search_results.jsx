@@ -1,5 +1,5 @@
 import React from 'react'
-import PostIndexItem from '../post/post_index_item'
+import PostIndexItem from '../posts/post_index_item'
 import { withRouter } from 'react-router'
 import {Link} from 'react-router-dom';  
 
@@ -62,7 +62,6 @@ class PostSearch extends React.Component{
                             <p>Browse.</p>
                             <p>Share.</p>
                             <p>Connect.</p>
-                            {/* <img className='transit-icon' src="/images/index_2.jpeg" alt="books" /> */}
                         </div> 
                     <div className='post-headline-1'>
                     <div className="create-post-index">
@@ -92,8 +91,7 @@ class PostSearch extends React.Component{
                         :
                         null
                         }
-                    </div>   
-            
+                  </div>   
                 </div>
             </div>
         )
