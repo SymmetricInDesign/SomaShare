@@ -42,7 +42,9 @@ class PostRating extends React.Component{
     }
     
     render(){
+
         const {currentUser, post} = this.props
+        
         return (
             <div id="post-rating-container">
                 <p>Rating</p>
@@ -51,12 +53,12 @@ class PostRating extends React.Component{
                     :
                     <i onClick={this.like} className="far fa-thumbs-up"></i>
                 }
-                {/* <div id="post-rating-digit"> */}
-                    <p>{post.rating}</p>
-                {/* </div> */}
+
+                <p>{post.rating}</p>
+
                 {currentUser && currentUser.dislikedPostIds.includes(post._id) ? 
                     <i onClick={this.removeDislike} className="fas fa-thumbs-down"></i>
-                    :
+                :
                     <i onClick={this.dislike} className="far fa-thumbs-down"></i>
                 }
             </div>
