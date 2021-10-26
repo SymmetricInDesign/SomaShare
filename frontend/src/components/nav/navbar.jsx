@@ -16,15 +16,14 @@ class NavBar extends React.Component {
     getLinks() {
         if (this.props.loggedIn) {
           return (
-            
               <div className="session-btn-nav">
                   
                   <Link className="user-profile-btn" to={`/users/${this.props.user._id}`} replace>Hello {this.props.username}!</Link>
                   <div className="login-nav-btn" onClick={this.logoutUser}>Logout</div>
                  
               </div>
-          );
-        } else {
+          )
+        }else {
           return (
               <div className="session-btn-nav">
                     <Link className="login-nav-btn" to={'/login'}>Login</Link>

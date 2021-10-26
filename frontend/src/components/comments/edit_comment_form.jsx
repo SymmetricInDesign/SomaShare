@@ -24,7 +24,6 @@ class EditCommentForm extends React.Component{
 
 
     render(){
-        // const {stopEditing, postId, comment} = this.props
         return(
             <div className="comment-index-item">
                 <form className='comment-form-container' onSubmit={this.handleSubmit}>
