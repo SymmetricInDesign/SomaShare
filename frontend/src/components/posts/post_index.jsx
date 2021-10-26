@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';  
 import PostIndexItem from './post_index_item'
-// import Footer from '../footer/footer'
 
 class PostIndex extends React.Component {
   constructor(props){
@@ -50,16 +49,13 @@ class PostIndex extends React.Component {
 
     return (
       <div className='body-container'>
-
           <div className='post-body-container'>
-              <div className='post-headline'>
-                
+              <div className='post-headline'>     
                   <p>Browse.</p>
                   <p>Share.</p>
                   <p>Connect.</p>
-                  {/* <img className='transit-icon' src="/images/index_2.jpeg" alt="books" /> */}
-      
               </div> 
+
               <div className='post-headline-1'>
                   <div className="create-post-index">
                     <div className="sort-button-container">
@@ -68,6 +64,7 @@ class PostIndex extends React.Component {
                       :
                         <div className="sort-button" onClick={() => this.setActive("newest")}>Newest</div>
                       }
+
                       {this.state.activeButton === "best" ? 
                         <div className="sort-button-active" onClick={() => this.setActive("best")}>Best</div>
                       :
@@ -76,22 +73,20 @@ class PostIndex extends React.Component {
                     </div>
                     <Link className="login-nav-btn" to={'/posts/new'}>Create Post</Link>
                   </div>
-                  {/* <div>Hello</div> */}
                   {posts ? 
-                  <ul className='posts-index'>
-                          {posts.map((post)=>(
-                              <PostIndexItem
-                                  currentUserId = {this.props.currentUserId}
-                                  key={post._id}
-                                  post={post}
-                                  />           
-                          ))}
-                  </ul>
+                    <ul className='posts-index'>
+                            {posts.map((post)=>(
+                                <PostIndexItem
+                                    currentUserId = {this.props.currentUserId}
+                                    key={post._id}
+                                    post={post}
+                                    />           
+                            ))}
+                    </ul>
                   :
-                  null
+                    null
                   }
               </div>   
-          
           </div>
       </div>
     )

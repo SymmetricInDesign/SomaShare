@@ -5,14 +5,11 @@ import { deletePost, fetchPost, updatePostLikes } from '../../actions/post_actio
 import {updateUserLikes, fetchUser} from '../../actions/user_actions'
 
 const mSTP = (state, ownProps) => {
-
     return{
         post: state.entities.posts[ownProps.match.params.postId],
         currentUserId: state.session.user._id ? state.session.user._id : undefined,
         currentUser: state.session.user._id ? state.session.user : undefined
     }
-    
-
 }
 
 const mDTP = dispatch => ({
