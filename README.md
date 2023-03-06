@@ -2,7 +2,7 @@
 
 ## Overview
 
-[SomaShare](https://somashare.herokuapp.com/#/) is a Redditlike interactive education website where users are able to share external links with other users. It utilizes a MongoDB/Express backend with a React/Redux frontend. 
+SomaShare is a Reddit-like interactive education website where users are able to share external links with other users. It utilizes a MongoDB/Express backend with a React/Redux frontend. 
 
 ![Somashare](https://github.com/SymmetricInDesign/SomaShare/blob/main/frontend/public/images/Screen%20Shot%202021-08-04%20at%207.46.36%20PM.png)
 
